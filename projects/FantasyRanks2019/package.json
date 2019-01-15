@@ -2,7 +2,11 @@
   "name": "FantasyRanks2019",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Prof <amartin@admartin.me>",
   "license": "MIT",
+  "scripts": {
+    "server": "nodemon"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",

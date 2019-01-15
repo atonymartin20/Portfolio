@@ -2,8 +2,8 @@
   "name": "WebsiteInfo",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Alex Martin <atonymartin20@yahoo.com>",
   "repository": "https://github.com/atonymartin20/Portfolio.git",
-
+  "author": "Alex Martin <atonymartin20@yahoo.com>",
   "license": "MIT"
+
 }
