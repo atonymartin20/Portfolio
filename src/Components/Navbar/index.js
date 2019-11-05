@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavbarDiv } from '../StyledComponents';
 
 function Navbar() {
     return (
-        <div>
+        <NavbarDiv>
             <h1>test</h1>
-        </div>
+        </NavbarDiv>
     )
 }
 
