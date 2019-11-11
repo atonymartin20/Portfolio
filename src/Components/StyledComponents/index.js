@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const NavbarDiv = styled.div`
     width: 100%;
-    background-color: green;
+    background-color: transparent;
     height: 65px;
     font-size: 2.5rem;
     display: flex;
@@ -13,6 +13,14 @@ const NavbarDiv = styled.div`
     left: 0;
 `;
 
+const HomepageDiv = styled.div`
+    width: 100%;
+    margin-top: 65px;
+    height: 2500px;
+`;
+
+
 export {
     NavbarDiv,
+    HomepageDiv,
 }

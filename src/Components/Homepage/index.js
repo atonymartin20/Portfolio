@@ -1,9 +1,14 @@
 import React from 'react';
+import Navbar from '../Navbar';
+import { HomepageDiv } from '../StyledComponents';
 
 class Homepage extends React.Component {
     render() {
         return (
-            <h1>lolz</h1>
+            <HomepageDiv>
+                <Navbar />
+                <h1>lolz</h1>
+            </HomepageDiv>
         )
     }
 }

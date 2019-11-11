@@ -1,10 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Navbar from './Components/Navbar';
 import Homepage from './Components/Homepage';
 // import Projects from './Components/Projects';
-// import ErrorPage from './Components/ErrorPage';
 
 function App() {
     return (
@@ -15,12 +13,11 @@ function App() {
                 </Route>
                 {/* <Route path="/projects">
                     <Projects />
-                </Route>
-                <Route>
-                    <ErrorPage />
                 </Route> */}
+                <Route>
+                    <Homepage />
+                </Route>
             </Switch>
-            <Navbar />
         </div>
     );
 }
