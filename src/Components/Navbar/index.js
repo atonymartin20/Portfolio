@@ -16,7 +16,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import MenuIcon from "@material-ui/icons/Menu";
 
-const styles = () => ({
+const styles = theme => ({
     appBar: {
         display: "flex",
         color: "white",
@@ -40,7 +40,10 @@ const styles = () => ({
     },
     logo: {
         fontFamily: "Rye, cursive",
-        fontSize: "3.0rem"
+        fontSize: "3.0rem",
+        [theme.breakpoints.down(600)]: {
+            margin: '0 auto',
+        }
     }
 });
 
