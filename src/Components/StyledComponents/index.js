@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import HomepageImageBackground from '../../Images/HomepageImage.jpg';
 
 const NavbarDiv = styled.div`
     width: 100%;
@@ -15,12 +16,20 @@ const NavbarDiv = styled.div`
 
 const HomepageDiv = styled.div`
     width: 100%;
-    margin-top: 65px;
     height: 2500px;
 `;
 
+const HomepageTopImg = styled.div`
+    background-image: url(${HomepageImageBackground});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+`;
 
 export {
     NavbarDiv,
     HomepageDiv,
+    HomepageTopImg,
 }
