@@ -94,7 +94,7 @@ class Navbar extends React.Component {
                         <MenuIcon />
                     </IconButton>
                 </Hidden>
-                <h1 className={classes.logo}>Alex Martin</h1>
+                <h1 className={classes.logo}>Alex Martin</h1> Moving Up and Down Side to Side Like A Roller Coaster
             </AppBar>
         );
     }
