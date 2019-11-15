@@ -96,6 +96,9 @@ class Navbar extends React.Component {
                     </IconButton>
                 </Hidden>
                 <h1 className={classes.logo}>Alex Martin</h1>
+                {/* Add About Button */}
+                {/* Add Projects Button */}
+                {/* Add Contact Page */}
             </AppBar>
         );
     }
