@@ -30,7 +30,8 @@ const styles = theme => ({
         height: 65,
         top: "0",
         padding: "0px 4%",
-        fontSize: "2.5rem"
+        fontSize: "2.5rem",
+        backgroundColor: "transparent"
     },
     backgroundBlue: {
         backgroundColor: "#0E3386"
@@ -94,7 +95,7 @@ class Navbar extends React.Component {
                         <MenuIcon />
                     </IconButton>
                 </Hidden>
-                <h1 className={classes.logo}>Alex Martin</h1> Moving Up and Down Side to Side Like A Roller Coaster
+                <h1 className={classes.logo}>Alex Martin</h1>
             </AppBar>
         );
     }
