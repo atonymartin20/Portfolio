@@ -99,7 +99,7 @@ class Navbar extends React.Component {
                 {/* Add About Button */}
                 {/* Add Projects Button */}
                 {/* Add Contact Page */}
-                {/* Green 5 */}
+                {/* Green 1 */}
             </AppBar>
         );
     }
