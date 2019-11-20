@@ -61,7 +61,10 @@ const styles = theme => ({
         [theme.breakpoints.down(600)]: {
             margin: '0 auto',
         }
-    }
+    },
+    root: {
+        flexGrow: 1
+    },
 });
 
 class Navbar extends React.Component {
@@ -153,22 +156,24 @@ class Navbar extends React.Component {
         )
 
         return (
-            <AppBar className={classes.appBar}>
-                <Hidden smUp>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={this.handleDrawerToggle}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                </Hidden>
-                <h1 className={classes.logo}>Alex Martin</h1>
-                {/* Add About Button */}
-                {/* Add Projects Button */}
-                {/* Add Contact Page */}
-                {/* Green 5 */}
-            </AppBar>
+            <div className={classes.root}>
+                <AppBar className={classes.appBar}>
+                    <Hidden smUp>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            onClick={this.handleDrawerToggle}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                    </Hidden>
+                    <h1 className={classes.logo}>Alex Martin</h1>
+                    {/* Add About Button */}
+                    {/* Add Projects Button */}
+                    {/* Add Contact Page */}
+                    {/* Green 5 */}
+                </AppBar>
+            </div>
         );
     }
 }
