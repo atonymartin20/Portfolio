@@ -111,7 +111,7 @@ class Navbar extends React.Component {
             drawerOpen: false
         })
     }
-    
+
     render() {
         const { classes } = this.props;
 
@@ -120,7 +120,7 @@ class Navbar extends React.Component {
                 <div className={classes.closeIconTooblar}>
                     {this.state.drawerOpen ? (
                         <div className={classes.closeButton}
-                        onClick={this.handleDrawerToggle}>
+                            onClick={this.handleDrawerToggle}>
                             <CloseIcon className={classes.closeIconStyling} />
                         </div>
                     ) : null}
@@ -158,21 +158,82 @@ class Navbar extends React.Component {
         return (
             <div className={classes.root}>
                 <AppBar className={classes.appBar}>
-                    <Hidden smUp>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            onClick={this.handleDrawerToggle}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    </Hidden>
-                    <h1 className={classes.logo}>Alex Martin</h1>
-                    {/* Add About Button */}
-                    {/* Add Projects Button */}
-                    {/* Add Contact Page */}
-                    {/* Green 5 */}
+                    <Toolbar className={classes.toolbar}>
+                        <Hidden smUp>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                onClick={this.handleDrawerToggle}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                        </Hidden>
+                        <h1 className={classes.logo}>Alex Martin</h1>
+                        <Hidden xsDown implementation="css">
+                            <div>
+                                <List className={classes.list}>
+                                    <ListItem className={classes.listItem}>
+                                        <Button
+                                            href='/projects'
+                                            className={classes.navLink}
+                                        >
+                                            Projects
+                                        </Button>
+                                    </ListItem>
+
+                                    <ListItem className={classes.listItem}>
+                                        <Button
+                                            href='/about'
+                                            className={classes.navLink}
+                                        >
+                                            About Me
+                                        </Button>
+                                    </ListItem>
+
+                                    <ListItem className={classes.listItem}>
+                                        <Button
+                                            href='/contact'
+                                            className={classes.navLink}
+                                        >
+                                            Contact Me
+                                        </Button>
+                                    </ListItem>
+                                </List>
+                            </div>
+                        </Hidden>
+                        {/* Add About Button */}
+                        {/* Add Projects Button */}
+                        {/* Add Contact Page */}
+                        {/* Green 5 */}
+                    </Toolbar>
                 </AppBar>
+
+                <nav className={classes.drawer}>
+                    <Hidden smUp implementation="css">
+                        <Drawer
+                            variant="temporary"
+                            anchor={'right'}
+                            open={this.state.drawerOpen}
+                            onClose={this.handleDrawerToggle}
+                            classes={{
+                                paper: classes.drawerPaper
+                            }}
+                        >
+                            {drawer}
+                        </Drawer>
+                    </Hidden>
+                    {/* <Hidden xsDown implementation="css">
+                        <Drawer
+                            classes={{
+                                paper: classes.drawerPaper
+                            }}
+                            variant="permanent"
+                            open
+                        >
+                            {drawer}
+                        </Drawer>
+                    </Hidden> */}
+                </nav>
             </div>
         );
     }
