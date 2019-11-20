@@ -1,20 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import classNames from "classnames";
-import withStyles from "@material-ui/core/styles/withStyles";
+
+// @material-ui/core components
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
-import Hidden from "@material-ui/core/Hidden";
+import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
-import Menu from "@material-ui/icons/Menu";
-import Close from "@material-ui/icons/Close";
-import { blue } from "@material-ui/core/colors";
-import { withTheme } from "@material-ui/styles";
+import Hidden from "@material-ui/core/Hidden";
+import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import Menu from "@material-ui/icons/Menu";
+import Toolbar from "@material-ui/core/Toolbar";
+import withStyles from "@material-ui/core/styles/withStyles";
+
+// @material-ui/icons
 import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
+import { runInThisContext } from "vm";
+
+const drawerWidth = 240;
 
 const styles = theme => ({
     appBar: {
@@ -38,6 +43,12 @@ const styles = theme => ({
     },
     backgroundTransparent: {
         backgroundColor: "transparent"
+    },
+    closeButton: {
+        cursor: "pointer",
+        padding: 15,
+        paddingLeft: 35,
+        fontSize: "2rem"
     },
     logo: {
         fontFamily: "Rye, cursive",
@@ -81,6 +92,18 @@ class Navbar extends React.Component {
         }
     }
 
+    handleDrawerToggle = () => {
+        this.setState({
+            drawerOpen: !this.state.drawerOpen
+        })
+    }
+
+    handleClose = () => {
+        this.setState({
+            drawerOpen: false
+        })
+    }
+    
     render() {
         const { classes } = this.props;
 
