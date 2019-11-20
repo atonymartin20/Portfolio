@@ -45,15 +45,34 @@ const styles = theme => ({
         backgroundColor: "transparent"
     },
     closeButton: {
-        cursor: "pointer",
         padding: 15,
         paddingLeft: 35,
-        fontSize: "2rem"
     },
     closeIconStyling: {
         width: '25px',
         height: '25px',
-        padding: '0px'
+        cursor: "pointer",
+    },
+    closeIconToolbar: {
+        height: 65,
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center'
+    },
+    drawer: {
+        [theme.breakpoints.up(600)]: {
+            width: drawerWidth,
+            flexShrink: 0
+        }
+    },
+    drawerPaper: {
+        width: '100%',
+        backgroundColor: '#E2E2E2',
+        color: 'black',
+        [theme.breakpoints.up(600)]: {
+            width: drawerWidth,
+            flexShrink: 0
+        }
     },
     logo: {
         fontFamily: "Rye, cursive",
@@ -117,10 +136,10 @@ class Navbar extends React.Component {
 
         const drawer = (
             <div>
-                <div className={classes.closeIconTooblar}>
+                <div className={classes.closeIconToolbar}>
                     {this.state.drawerOpen ? (
                         <div className={classes.closeButton}
-                            onClick={this.handleDrawerToggle}>
+                            onClick={this.handleClose}>
                             <CloseIcon className={classes.closeIconStyling} />
                         </div>
                     ) : null}
@@ -201,10 +220,6 @@ class Navbar extends React.Component {
                                 </List>
                             </div>
                         </Hidden>
-                        {/* Add About Button */}
-                        {/* Add Projects Button */}
-                        {/* Add Contact Page */}
-                        {/* Green 5 */}
                     </Toolbar>
                 </AppBar>
 
@@ -212,7 +227,7 @@ class Navbar extends React.Component {
                     <Hidden smUp implementation="css">
                         <Drawer
                             variant="temporary"
-                            anchor={'right'}
+                            anchor={'left'}
                             open={this.state.drawerOpen}
                             onClose={this.handleDrawerToggle}
                             classes={{
@@ -222,17 +237,6 @@ class Navbar extends React.Component {
                             {drawer}
                         </Drawer>
                     </Hidden>
-                    {/* <Hidden xsDown implementation="css">
-                        <Drawer
-                            classes={{
-                                paper: classes.drawerPaper
-                            }}
-                            variant="permanent"
-                            open
-                        >
-                            {drawer}
-                        </Drawer>
-                    </Hidden> */}
                 </nav>
             </div>
         );
