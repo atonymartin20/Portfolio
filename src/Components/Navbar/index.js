@@ -74,6 +74,47 @@ const styles = theme => ({
             flexShrink: 0
         }
     },
+    list: {
+        // marginTop: '0px',
+        display: 'flex',
+        padding: '0px',
+        margin: '0px',
+        listStyle: 'none',
+        [theme.breakpoints.up("sm")]: {
+            WebkitBoxAlign: "center",
+            MsFlexAlign: "center",
+            alignItems: "center",
+            WebkitBoxOrient: "horizontal",
+            WebkitBoxDirection: "normal",
+            MsFlexDirection: "row",
+            flexDirection: "row"
+        },
+        [theme.breakpoints.down(600)]: {
+            display: "block"
+        },
+    },
+    listItem: {
+        float: "left",
+        color: "inherit",
+        position: "relative",
+        display: "block",
+        width: "auto",
+        margin: "0",
+        padding: "0",
+        marginLeft: "15px",
+        [theme.breakpoints.down(600)]: {
+            marginLeft: '0px',
+            paddingLeft: '5px',
+            width: '100%',
+            borderBottom: '1px solid #C2C2C2',
+            borderRight: '1px solid #C2C2C2',
+            backgroundColor: '#DDDDDD',
+            "& ul": {
+                maxHeight: "400px",
+                overflow: "scroll"
+            },
+        }
+    },
     logo: {
         fontFamily: "Rye, cursive",
         fontSize: "3.0rem",
@@ -81,8 +122,56 @@ const styles = theme => ({
             margin: '0 auto',
         }
     },
+    navLink: {
+        color: "inherit",
+        // backgroundColor: '#AA1649',
+        position: "relative",
+        padding: "0.9375rem",
+        fontWeight: "400",
+        fontSize: "1.5rem",
+        textTransform: "uppercase",
+        lineHeight: "20px",
+        textDecoration: "none",
+        display: "inline-flex",
+        "&:hover,&:focus": {
+            backgroundColor: "#AA1649"
+        },
+        "& .fab,& .far,& .fal,& .fas,& .material-icons": {
+            position: "relative",
+            top: "2px",
+            marginTop: "-4px",
+            marginRight: "4px",
+            marginBottom: "0px",
+            fontSize: "1.25rem"
+        },
+        [theme.breakpoints.down("sm")]: {
+            width: "calc(100% - 30px)",
+            marginBottom: "8px",
+            marginTop: "8px",
+            textAlign: "left",
+            textTransform: "none",
+            fontSize: '1.75rem',
+            "& > span:first-child": {
+                justifyContent: "flex-start"
+            }
+        },
+        "& svg": {
+            marginRight: "3px",
+            width: "20px",
+            height: "20px"
+        }
+    },
     root: {
         flexGrow: 1
+    },
+    toolbar: {
+        height: 65,
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        [theme.breakpoints.down(600)]: {
+            justifyContent: 'flex-start'
+        },
     },
 });
 
