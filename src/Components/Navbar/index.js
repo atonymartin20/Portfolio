@@ -50,6 +50,11 @@ const styles = theme => ({
         paddingLeft: 35,
         fontSize: "2rem"
     },
+    closeIconStyling: {
+        width: '25px',
+        height: '25px',
+        padding: '0px'
+    },
     logo: {
         fontFamily: "Rye, cursive",
         fontSize: "3.0rem",
@@ -106,6 +111,46 @@ class Navbar extends React.Component {
     
     render() {
         const { classes } = this.props;
+
+        const drawer = (
+            <div>
+                <div className={classes.closeIconTooblar}>
+                    {this.state.drawerOpen ? (
+                        <div className={classes.closeButton}
+                        onClick={this.handleDrawerToggle}>
+                            <CloseIcon className={classes.closeIconStyling} />
+                        </div>
+                    ) : null}
+                </div>
+                <Divider />
+                <List className={classes.list}>
+                    <ListItem className={classes.listItem}>
+                        <Button
+                            href='/projects'
+                            className={classes.navLink}
+                        >
+                            Projects
+                        </Button>
+                    </ListItem>
+                    <ListItem className={classes.listItem}>
+                        <Button
+                            href='/about'
+                            className={classes.navLink}
+                        >
+                            About Me
+                        </Button>
+                    </ListItem>
+                    <ListItem className={classes.listItem}>
+                        <Button
+                            href='/contact'
+                            className={classes.navLink}
+                        >
+                            Contact Me
+                        </Button>
+                    </ListItem>
+                </List>
+            </div>
+        )
 
         return (
             <AppBar className={classes.appBar}>
