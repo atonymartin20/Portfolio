@@ -324,6 +324,7 @@ class Navbar extends React.Component {
                             }}
                         >
                             {drawer}
+                            {/* Green 1 */}
                         </Drawer>
                     </Hidden>
                 </nav>
