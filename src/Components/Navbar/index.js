@@ -74,6 +74,11 @@ const styles = theme => ({
             flexShrink: 0
         }
     },
+    hide710: {
+        [theme.breakpoints.down(710)]: {
+            display: 'none'
+        }
+    },
     list: {
         // marginTop: '0px',
         display: 'flex',
@@ -167,6 +172,13 @@ const styles = theme => ({
     },
     root: {
         flexGrow: 1
+    },
+    show710: {
+        border: '2px solid orange',
+        display: 'flex',
+        [theme.breakpoints.up(710)]: {
+            display: 'none'
+        }
     },
     toolbar: {
         height: 65,
@@ -272,7 +284,7 @@ class Navbar extends React.Component {
             <div className={classes.root}>
                 <AppBar className={classes.appBar}>
                     <Toolbar className={classes.toolbar}>
-                        <Hidden smUp>
+                        <Hidden implementation="css" className={classes.show710}>
                             <IconButton
                                 color="inherit"
                                 aria-label="open drawer"
@@ -282,7 +294,7 @@ class Navbar extends React.Component {
                             </IconButton>
                         </Hidden>
                         <h1 className={classes.logo}>Alex Martin</h1>
-                        <Hidden xsDown implementation="css">
+                        <Hidden implementation="css" className={classes.hide710}>
                             <div>
                                 <List className={classes.list}>
                                     <ListItem className={classes.listItem}>
