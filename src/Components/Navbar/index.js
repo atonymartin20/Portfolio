@@ -133,6 +133,7 @@ const styles = theme => ({
         lineHeight: "20px",
         textDecoration: "none",
         display: "inline-flex",
+        marginLeft: '30px',
         "&:hover,&:focus": {
             backgroundColor: "#AA1649"
         },
@@ -145,12 +146,15 @@ const styles = theme => ({
             fontSize: "1.25rem"
         },
         [theme.breakpoints.down("sm")]: {
+            marginLeft: '10px',
+        },
+        [theme.breakpoints.down(600)]: {
             width: "calc(100% - 30px)",
             marginBottom: "8px",
             marginTop: "8px",
             textAlign: "left",
+            marginLeft: '0px',
             textTransform: "none",
-            fontSize: '1.75rem',
             "& > span:first-child": {
                 justifyContent: "flex-start"
             }
@@ -167,6 +171,7 @@ const styles = theme => ({
     toolbar: {
         height: 65,
         display: "flex",
+        width: '100%',
         justifyContent: "space-between",
         alignItems: "center",
         [theme.breakpoints.down(600)]: {
