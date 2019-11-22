@@ -123,7 +123,7 @@ const styles = theme => ({
     logo: {
         fontFamily: "Rye, cursive",
         fontSize: "3.0rem",
-        [theme.breakpoints.down(600)]: {
+        [theme.breakpoints.down(710)]: {
             margin: '0 auto',
         }
     },
@@ -174,7 +174,6 @@ const styles = theme => ({
         flexGrow: 1
     },
     show710: {
-        border: '2px solid orange',
         display: 'flex',
         [theme.breakpoints.up(710)]: {
             display: 'none'
