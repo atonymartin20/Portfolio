@@ -60,16 +60,23 @@ const styles = theme => ({
         alignItems: 'center'
     },
     drawer: {
-        [theme.breakpoints.up(600)]: {
+        [theme.breakpoints.up(710)]: {
             width: drawerWidth,
             flexShrink: 0
         }
+    },
+    drawerList: {
+        display: 'flex',
+        padding: '0px',
+        margin: '0px',
+        listStyle: 'none',
+        flexDirection: "column",
     },
     drawerPaper: {
         width: '100%',
         backgroundColor: '#E2E2E2',
         color: 'black',
-        [theme.breakpoints.up(600)]: {
+        [theme.breakpoints.up(710)]: {
             width: drawerWidth,
             flexShrink: 0
         }
@@ -80,7 +87,6 @@ const styles = theme => ({
         }
     },
     list: {
-        // marginTop: '0px',
         display: 'flex',
         padding: '0px',
         margin: '0px',
@@ -94,8 +100,8 @@ const styles = theme => ({
             MsFlexDirection: "row",
             flexDirection: "row"
         },
-        [theme.breakpoints.down(600)]: {
-            display: "block"
+        [theme.breakpoints.down(710)]: {
+            flexDirection: "column",
         },
     },
     listItem: {
@@ -107,7 +113,7 @@ const styles = theme => ({
         margin: "0",
         padding: "0",
         marginLeft: "15px",
-        [theme.breakpoints.down(600)]: {
+        [theme.breakpoints.down(710)]: {
             marginLeft: '0px',
             paddingLeft: '5px',
             width: '100%',
@@ -153,7 +159,7 @@ const styles = theme => ({
         [theme.breakpoints.down("sm")]: {
             marginLeft: '10px',
         },
-        [theme.breakpoints.down(600)]: {
+        [theme.breakpoints.down(710)]: {
             width: "calc(100% - 30px)",
             marginBottom: "8px",
             marginTop: "8px",
@@ -250,7 +256,7 @@ class Navbar extends React.Component {
                     ) : null}
                 </div>
                 <Divider />
-                <List className={classes.list}>
+                <List className={classes.drawerList}>
                     <ListItem className={classes.listItem}>
                         <Button
                             href='/projects'
