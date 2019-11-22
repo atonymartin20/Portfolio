@@ -72,14 +72,65 @@ const styles = theme => ({
         listStyle: 'none',
         flexDirection: "column",
     },
+    drawerListItem: {
+        float: "left",
+        color: "inherit",
+        position: "relative",
+        display: "block",
+        margin: "0",
+        padding: "0",
+        marginLeft: "15px",
+        marginLeft: '0px',
+        paddingLeft: '5px',
+        width: '100%',
+        borderBottom: '1px solid #C2C2C2',
+        borderRight: '1px solid #C2C2C2',
+        backgroundColor: '#DDDDDD',
+        "& ul": {
+            maxHeight: "400px",
+            overflow: "scroll"
+        }
+    },
+    drawerNavLink: {
+        color: "inherit",
+        // backgroundColor: '#AA1649',
+        position: "relative",
+        padding: "0.9375rem",
+        fontWeight: "400",
+        fontSize: "1.5rem",
+        lineHeight: "20px",
+        textDecoration: "none",
+        display: "inline-flex",
+        width: "calc(100% - 30px)",
+        marginBottom: "8px",
+        marginTop: "8px",
+        textAlign: "left",
+        marginLeft: '0px',
+        textTransform: "none",
+        "& > span:first-child": {
+            justifyContent: "flex-start"
+        },
+        "&:hover,&:focus": {
+            backgroundColor: "#AA1649"
+        },
+        "& .fab,& .far,& .fal,& .fas,& .material-icons": {
+            position: "relative",
+            top: "2px",
+            marginTop: "-4px",
+            marginRight: "4px",
+            marginBottom: "0px",
+            fontSize: "1.25rem"
+        },
+        "& svg": {
+            marginRight: "3px",
+            width: "20px",
+            height: "20px"
+        }
+    },
     drawerPaper: {
         width: '100%',
         backgroundColor: '#E2E2E2',
         color: 'black',
-        [theme.breakpoints.up(710)]: {
-            width: drawerWidth,
-            flexShrink: 0
-        }
     },
     hide710: {
         [theme.breakpoints.down(710)]: {
@@ -257,26 +308,26 @@ class Navbar extends React.Component {
                 </div>
                 <Divider />
                 <List className={classes.drawerList}>
-                    <ListItem className={classes.listItem}>
+                    <ListItem className={classes.drawerListItem}>
                         <Button
                             href='/projects'
-                            className={classes.navLink}
+                            className={classes.drawerNavLink}
                         >
                             Projects
                         </Button>
                     </ListItem>
-                    <ListItem className={classes.listItem}>
+                    <ListItem className={classes.drawerListItem}>
                         <Button
                             href='/about'
-                            className={classes.navLink}
+                            className={classes.drawerNavLink}
                         >
                             About Me
                         </Button>
                     </ListItem>
-                    <ListItem className={classes.listItem}>
+                    <ListItem className={classes.drawerListItem}>
                         <Button
                             href='/contact'
-                            className={classes.navLink}
+                            className={classes.drawerNavLink}
                         >
                             Contact Me
                         </Button>
