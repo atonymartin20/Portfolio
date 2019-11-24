@@ -10,14 +10,12 @@ import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Menu from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import { runInThisContext } from "vm";
 
 const drawerWidth = 240;
 
@@ -397,7 +395,7 @@ class Navbar extends React.Component {
                             }}
                         >
                             {drawer}
-                            {/* Green 5 */}
+                            {/* Green 1 */}
                         </Drawer>
                     </Hidden>
                 </nav>
