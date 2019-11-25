@@ -395,7 +395,7 @@ class Navbar extends React.Component {
                             }}
                         >
                             {drawer}
-                            {/* Green 5 */}
+                            {/* Green 1 */}
                         </Drawer>
                     </Hidden>
                 </nav>
