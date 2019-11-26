@@ -91,7 +91,6 @@ const styles = theme => ({
     },
     drawerNavLink: {
         color: "inherit",
-        // backgroundColor: '#AA1649',
         position: "relative",
         padding: "0.9375rem",
         fontWeight: "400",
@@ -184,7 +183,6 @@ const styles = theme => ({
     },
     navLink: {
         color: "inherit",
-        // backgroundColor: '#AA1649',
         position: "relative",
         padding: "0.9375rem",
         fontWeight: "400",
@@ -395,7 +393,7 @@ class Navbar extends React.Component {
                             }}
                         >
                             {drawer}
-                            {/* Green 5 */}
+                            {/* Green 1 */}
                         </Drawer>
                     </Hidden>
                 </nav>
