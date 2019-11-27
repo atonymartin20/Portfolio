@@ -6,7 +6,7 @@ import HomepageImageBackground from '../../Images/HomepageImage.jpg';
 const styles = () => ({
     homepageDiv: {
         width: '100%',
-        height: '100vh',
+        height: '2500px',
         maxHeight: '200vh'
     },
     homepageHeader: {
