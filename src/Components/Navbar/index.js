@@ -77,7 +77,6 @@ const styles = theme => ({
         display: "block",
         margin: "0",
         padding: "0",
-        marginLeft: "15px",
         marginLeft: '0px',
         paddingLeft: '5px',
         width: '100%',

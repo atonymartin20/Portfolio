@@ -3,10 +3,11 @@ import Navbar from '../Navbar';
 import withStyles from "@material-ui/core/styles/withStyles";
 import HomepageImageBackground from '../../Images/HomepageImage.jpg';
 
-const styles = theme => ({
+const styles = () => ({
     homepageDiv: {
         width: '100%',
-        height: '2500px',
+        height: '100vh',
+        maxHeight: '200vh'
     },
     homepageHeader: {
         boxSizing: 'border-box',
@@ -30,6 +31,7 @@ const styles = theme => ({
         backgroundRepeat: 'no-repeat',
         width: '100%',
         height: '600px',
+        // height: '100vh',
     },
 })
 
@@ -44,10 +46,8 @@ class Homepage extends React.Component {
                     <header className={classes.homepageHeader}>
                         <h1>Alex Martin</h1>
                         <h2>Full Stack Web Developer</h2>
-
                     </header>
                 </div>
-                <h1>lolz</h1>
             </div>
         )
     }
