@@ -304,6 +304,14 @@ class Navbar extends React.Component {
                 <List className={classes.drawerList}>
                     <ListItem className={classes.drawerListItem}>
                         <Button
+                            href='/'
+                            className={classes.drawerNavLink}
+                        >
+                            Home
+                        </Button>
+                    </ListItem>
+                    <ListItem className={classes.drawerListItem}>
+                        <Button
                             href='/projects'
                             className={classes.drawerNavLink}
                         >
@@ -347,6 +355,14 @@ class Navbar extends React.Component {
                         <Hidden implementation="css" className={classes.hide710}>
                             <div>
                                 <List className={classes.list}>
+                                    <ListItem className={classes.listItem}>
+                                        <Button
+                                            href='/'
+                                            className={classes.navLink}
+                                        >
+                                            Home
+                                        </Button>
+                                    </ListItem>
                                     <ListItem className={classes.listItem}>
                                         <Button
                                             href='/projects'
