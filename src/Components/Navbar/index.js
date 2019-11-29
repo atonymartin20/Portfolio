@@ -179,6 +179,11 @@ const styles = theme => ({
             margin: '0 auto',
         }
     },
+    menuIconStyling: {
+        width: '25px',
+        height: '25px',
+        cursor: "pointer",
+    },
     navLink: {
         color: "inherit",
         position: "relative",
@@ -348,7 +353,7 @@ class Navbar extends React.Component {
                                 aria-label="open drawer"
                                 onClick={this.handleDrawerToggle}
                             >
-                                <MenuIcon />
+                                <MenuIcon className={classes.menuIconStyling}/>
                             </IconButton>
                         </Hidden>
                         <h1 className={classes.logo}>Alex Martin</h1>
@@ -414,6 +419,5 @@ class Navbar extends React.Component {
         );
     }
 }
-// Green 4
 
 export default withStyles(styles)(Navbar);
