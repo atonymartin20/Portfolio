@@ -53,5 +53,5 @@ class Homepage extends React.Component {
     }
 }
 
-// Commit 3
+// Commit 4
 export default withStyles(styles)(Homepage);
