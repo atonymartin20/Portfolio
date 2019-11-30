@@ -33,7 +33,10 @@ const styles = theme => ({
         top: "0",
         padding: "0px 4%",
         fontSize: "2.5rem",
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
+        [theme.breakpoints.down(710)]: {
+            padding: '0px 2%'
+        }
     },
     backgroundBlue: {
         backgroundColor: "#0E3386"
@@ -207,7 +210,7 @@ const styles = theme => ({
             fontSize: "1.25rem"
         },
         [theme.breakpoints.down("sm")]: {
-            marginLeft: '10px',
+            marginLeft: '0px',
         },
         [theme.breakpoints.down(710)]: {
             width: "calc(100% - 30px)",
