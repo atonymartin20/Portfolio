@@ -6,7 +6,7 @@ import HomepageImageBackground from '../../Images/HomepageImage.jpg';
 const styles = () => ({
     homepageDiv: {
         width: '100%',
-        height: '2500px',
+        height: '100%',
         maxHeight: '200vh'
     },
     homepageHeader: {
@@ -31,7 +31,6 @@ const styles = () => ({
         backgroundRepeat: 'no-repeat',
         width: '100%',
         height: '600px',
-        // height: '100vh',
     },
 })
 
@@ -45,7 +44,7 @@ class Homepage extends React.Component {
                 <div className={classes.homepageTopImg}>
                     <header className={classes.homepageHeader}>
                         <h1>Alex Martin</h1>
-                        <h2>Full Stack Web Developer</h2>
+                        <h1>Full Stack Web Developer</h1>
                     </header>
                 </div>
             </div>
@@ -53,5 +52,4 @@ class Homepage extends React.Component {
     }
 }
 
-// Commit 5
 export default withStyles(styles)(Homepage);

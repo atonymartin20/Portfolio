@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Homepage from './Components/Homepage';
-// import Projects from './Components/Projects';
+import Projects from './Components/Projects';
 
 function App() {
     return (
@@ -11,9 +11,9 @@ function App() {
                 <Route exact path="/">
                     <Homepage />
                 </Route>
-                {/* <Route path="/projects">
+                <Route path="/projects">
                     <Projects />
-                </Route> */}
+                </Route>
                 <Route>
                     <Homepage />
                 </Route>
