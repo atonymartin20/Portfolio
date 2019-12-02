@@ -13,7 +13,6 @@ const styles = () => ({
         fontSize: '2rem',
         "&:hover": {
             backgroundColor: "#AA1649",
-            // border: 'none',
         },
     },
     homepageDiv: {

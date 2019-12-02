@@ -11,21 +11,21 @@ const styles = () => ({
     projectHeader: {
         boxSizing: 'border-box',
         textAlign: 'center',
-        backgroundColor: 'rgba(43, 43, 43, 0.1)',
+        // backgroundColor: 'rgba(43, 43, 43, 0.1)',
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         padding: '100px 2.5%',
-        textShadow: '1px 1px 2px black, 1px 0px 2px black, 0px 1px 2px black, 0 0 8px #333',
-        height: '600px',
-        color: 'white',
+        // textShadow: '1px 1px 2px black, 1px 0px 2px black, 0px 1px 2px black, 0 0 8px #333',
+        // height: '600px',
+        color: 'black',
         fontSize: '3.5rem',
     },
 })
 
-class Homepage extends React.Component {
+class Projects extends React.Component {
     render() {
         const { classes } = this.props;
 
@@ -33,13 +33,12 @@ class Homepage extends React.Component {
             <div className={classes.projectsDiv}>
                 <Navbar />
                     <header className={classes.projectHeader}>
-                        <h1>Alex Martin</h1>
-                        <h2>Full Stack Web Developer</h2>
+                        <h1>Group Projects:</h1>
+                        <h1>Solo Projects:</h1>
                     </header>
             </div>
         )
     }
 }
 
-// Commit 5
-export default withStyles(styles)(Homepage);
+export default withStyles(styles)(Projects);
