@@ -11,7 +11,7 @@ const styles = () => ({
         border: '1px solid white',
         marginTop: '15px',
         fontSize: '2rem',
-        "&:hover,&:focus": {
+        "&:hover": {
             backgroundColor: "#AA1649",
             // border: 'none',
         },
@@ -35,6 +35,10 @@ const styles = () => ({
         height: '600px',
         color: 'white',
         fontSize: '3.5rem',
+    },
+    homepageHeaderText: {
+        marginTop: '10px',
+        marginBottom: '10px',
     },
     homepageTopImg: {
         backgroundImage: `url(${HomepageImageBackground})`,
