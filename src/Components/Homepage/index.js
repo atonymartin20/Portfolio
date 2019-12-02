@@ -2,8 +2,20 @@ import React from 'react';
 import Navbar from '../Navbar';
 import withStyles from "@material-ui/core/styles/withStyles";
 import HomepageImageBackground from '../../Images/HomepageImage.jpg';
+import Button from "@material-ui/core/Button";
 
 const styles = () => ({
+    githubButton: {
+        backgroundColor: '#0E3386',
+        color: 'white',
+        border: '1px solid white',
+        marginTop: '15px',
+        fontSize: '2rem',
+        "&:hover,&:focus": {
+            backgroundColor: "#AA1649",
+            // border: 'none',
+        },
+    },
     homepageDiv: {
         width: '100%',
         height: '100%',
@@ -45,6 +57,14 @@ class Homepage extends React.Component {
                     <header className={classes.homepageHeader}>
                         <h1>Alex Martin</h1>
                         <h1>Full Stack Web Developer</h1>
+                        <Button
+                            variant="contained"
+                            href='https://github.com/atonymartin20'
+                            target="_blank"
+                            className={classes.githubButton}
+                        >
+                            Github
+                        </Button>
                     </header>
                 </div>
             </div>
