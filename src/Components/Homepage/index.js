@@ -59,8 +59,8 @@ class Homepage extends React.Component {
                 <Navbar />
                 <div className={classes.homepageTopImg}>
                     <header className={classes.homepageHeader}>
-                        <h1>Alex Martin</h1>
-                        <h1>Full Stack Web Developer</h1>
+                        <h1 className={classes.homepageHeaderText}>Alex Martin</h1>
+                        <h1 className={classes.homepageHeaderText}>Full Stack Web Developer</h1>
                         <Button
                             variant="contained"
                             href='https://github.com/atonymartin20'
