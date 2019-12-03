@@ -35,7 +35,7 @@ class Projects extends React.Component {
                     <header className={classes.projectHeader}>
                         <h1>Group Projects:</h1>
                         <h1>Solo Projects:</h1>
-                        {/* Commit 4 */}
+                        {/* Commit 5 */}
                     </header>
             </div>
         )
