@@ -1,11 +1,6 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import withStyles from "@material-ui/core/styles/withStyles";
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import ReactCardFlip from 'react-card-flip';
-
 
 const styles = () => ({
     projectsDiv: {
@@ -37,11 +32,12 @@ class Projects extends React.Component {
         return (
             <div className={classes.projectsDiv}>
                 <Navbar />
-                    <header className={classes.projectHeader}>
-                        <h1>Group Projects:</h1>
-                        <h1>Solo Projects:</h1>
-                        {/* Commit 5 */}
-                    </header>
+                <header className={classes.projectHeader}>
+                    <h1>Group Projects:</h1>
+
+                    <h1>Solo Projects:</h1>
+                    {/* Commit 5 */}
+                </header>
             </div>
         )
     }
