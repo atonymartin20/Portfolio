@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import withStyles from "@material-ui/core/styles/withStyles";
+import ProjectCardList from './projectCardList.js';
 
 const styles = () => ({
     projectsDiv: {
@@ -34,7 +35,7 @@ class Projects extends React.Component {
                 <Navbar />
                 <header className={classes.projectHeader}>
                     <h1>Group Projects:</h1>
-
+                    <ProjectCardList />
                     <h1>Solo Projects:</h1>
                     {/* Commit 5 */}
                 </header>
