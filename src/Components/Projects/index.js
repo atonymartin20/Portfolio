@@ -35,10 +35,9 @@ class Projects extends React.Component {
                 <Navbar />
                 <header className={classes.projectHeader}>
                     <h1>Group Projects:</h1>
-                    <ProjectCardList />
+                    <ProjectCardList projectType="group"/>
                     <h1>Solo Projects:</h1>
-                    <ProjectCardList />
-                    {/* Add Type to ProjectCardList to seperate group and solo projects */}
+                    <ProjectCardList projectType="solo"/>
                 </header>
             </div>
         )
