@@ -1,7 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import ProjectCard from './projectCard.js';
-import { AppContext } from '../Context/AppContext';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -47,6 +46,4 @@ class ProjectCardList extends React.Component {
   }
 }
 
-ProjectCardList.contextType = AppContext;
-
-export default withStyles(styles, { withTheme: true })(ProjectCardList);
+export default withStyles(styles)(ProjectCardList);

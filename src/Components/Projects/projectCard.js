@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import axios from 'axios';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -9,7 +8,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import EditIcon from '@material-ui/icons/Edit';
 import ReactCardFlip from 'react-card-flip';
-import { AppContext } from '../Context/AppContext';
 
 const styles = theme => ({
     cardFront: {
@@ -128,27 +126,6 @@ class ProjectCard extends React.Component {
         const { classes } = this.props;
         const { name } = this.state;
 
-        const labelStyle = {
-            color: 'rgb(20,20,20)',
-            textAlign: 'center',
-            fontFamily: 'Monserrat',
-            fontSize: '1.2rem',
-            backgroundColor: '#E2ECF7',
-            padding: '0px 5px'
-        };
-
-        const inputStyle = {
-            color: '#333',
-            fontFamily: 'Monserrat',
-            fontSize: '0.9rem'
-        };
-
-        const inputStyleBack = {
-            color: '#333',
-            fontFamily: 'Monserrat',
-            fontSize: '0.9rem'
-        };
-
         return (
             <div>
                 <ReactCardFlip
@@ -194,7 +171,5 @@ class ProjectCard extends React.Component {
 ProjectCard.propTypes = {
     classes: PropTypes.object.isRequired
 };
-
-ProjectCard.contextType = AppContext;
 
 export default withStyles(styles)(ProjectCard);
