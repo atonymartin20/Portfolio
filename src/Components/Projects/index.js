@@ -1,6 +1,11 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import withStyles from "@material-ui/core/styles/withStyles";
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import ReactCardFlip from 'react-card-flip';
+
 
 const styles = () => ({
     projectsDiv: {
