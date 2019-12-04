@@ -37,6 +37,7 @@ class Projects extends React.Component {
                     <h1>Group Projects:</h1>
                     <ProjectCardList />
                     <h1>Solo Projects:</h1>
+                    <ProjectCardList />
                     {/* Add Type to ProjectCardList to seperate group and solo projects */}
                 </header>
             </div>
