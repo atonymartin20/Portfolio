@@ -31,9 +31,9 @@ class ProjectCardList extends React.Component {
         if (projectType === 'solo') {
             return (
                 <div className={classes.content}>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={16}> {/* fix spacing prop */}
                         <Grid item xs={12}>
-                            <Grid container justify="center" spacing={24}>
+                            <Grid container justify="center" spacing={24}>{/* fix spacing prop */}
                                 {this.state.soloProjects.map(project => (
                                     <Grid key={project.id} item>
                                         <ProjectCard

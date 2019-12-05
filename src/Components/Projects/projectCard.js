@@ -135,14 +135,14 @@ class ProjectCard extends React.Component {
                 >
                     {/* Card only flips when EditIcon is clicked. */}
                     <Card className={classes.cardFront} key="front" onClick={this.ClickHandler}>
+                        <CardMedia
+                            // className={classes.media}
+                            image='/images/TreasureHunt.jpg'
+                            title="Paella dish" />
                         <CardContent className={classes.container}>
                             <Typography className={classes.title}>
                                 {name}
                             </Typography>
-                            <CardMedia
-                                // className={classes.media}
-                                image='/images/TreasureHunt.jpg'
-                                title="Paella dish" />
                         </CardContent>
                     </Card>
 
