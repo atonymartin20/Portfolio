@@ -18,7 +18,7 @@ const styles = theme => ({
         justifyContent: 'center',
         boxShadow: '1px 1px 4px #333, 2px 2px 7px #1565c0',
         minHeight: '330px',
-        backgroundColor: '#1565c0dd',
+        // backgroundColor: '#1565c0dd',
         padding: 0,
         margin: 0,
         height: 'auto',
@@ -78,6 +78,11 @@ const styles = theme => ({
         borderBottom: '1px solid #999',
         fontSize: '1rem'
     },
+    media: {
+        height: 0,
+        paddingTop: '56.25%', // 16:9,
+        marginTop: '30'
+    },
     record: {
         display: 'flex',
         backgroundColor: 'white',
@@ -98,6 +103,7 @@ class ProjectCard extends React.Component {
         name: this.props.name,
         id: this.props.id,
         picture: this.props.picture,
+        text: this.props.text,
         isFlipped: false,
     };
 
@@ -125,25 +131,21 @@ class ProjectCard extends React.Component {
 
     render() {
         const { classes } = this.props;
-        const { name, picture, text } = this.state;
-        console.log(this.state.name, this.state.picture, this.props.picture, this.props.text, this.props.name)
+        const { name, picture } = this.state;
         return (
             <div>
+                <h1>{name}</h1>
                 <ReactCardFlip
                     isFlipped={this.state.isFlipped}
                     flipDirection="horizontal"
                 >
-                    {/* Card only flips when EditIcon is clicked. */}
                     <Card className={classes.cardFront} key="front" onClick={this.ClickHandler}>
-                        <CardMedia
-                            // className={classes.media}
-                            image='/images/TreasureHunt.jpg'
-                            title="Paella dish" />
-                        <CardContent className={classes.container}>
-                            <Typography className={classes.title}>
+                        <img src={picture} width='100%' height='100%' />
+                        {/* <CardContent className={classes.container}> */}
+                            {/* <Typography className={classes.title}>
                                 {name}
-                            </Typography>
-                        </CardContent>
+                            </Typography> */}
+                        {/* </CardContent> */}
                     </Card>
 
                     <Card className={classes.cardBack} key="back">

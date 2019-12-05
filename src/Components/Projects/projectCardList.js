@@ -5,7 +5,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 // images
 import LeagueManagementIMG from './images/LeagueManagement.jpg';
-import test from '/'
 import TreasureHuntIMG from './images/TreasureHunt.jpg';
 
 const styles = theme => ({
@@ -13,16 +12,17 @@ const styles = theme => ({
         height: 'auto',
         padding: '20px',
         width: '95%',
-    }
+    },
 });
 
 class ProjectCardList extends React.Component {
     state = {
         groupProjects: [
-            { id: 1, name: 'League Management', picture: './images/TreasureHunt.jpg', text: '...' }
+            { id: 1, name: 'League Management', picture: require('./images/LeagueManagement.jpg') },
+            { id: 2, name: 'TreasureHunt', picture: require('./images/TreasureHunt.jpg')}
         ],
         soloProjects: [
-            { name: 'I am a minon', picture: './images/TreasureHunt.jpg', text: '...' }
+            { id: 1, name: 'I am a minon', picture: require('./images/TreasureHunt.jpg') }
         ]
     };
 
@@ -31,9 +31,9 @@ class ProjectCardList extends React.Component {
         if (projectType === 'solo') {
             return (
                 <div className={classes.content}>
-                    <Grid container spacing={16}> {/* fix spacing prop */}
+                    <Grid container spacing={5}>
                         <Grid item xs={12}>
-                            <Grid container justify="center" spacing={24}>{/* fix spacing prop */}
+                            <Grid container justify="center" spacing={5}>
                                 {this.state.soloProjects.map(project => (
                                     <Grid key={project.id} item>
                                         <ProjectCard
@@ -54,14 +54,16 @@ class ProjectCardList extends React.Component {
         else if (projectType === 'group') {
             return (
                 <div className={classes.content}>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={5}>
                         <Grid item xs={12}>
-                            <Grid container justify="center" spacing={24}>
+                            <Grid container justify="center" spacing={5}>
                                 {this.state.groupProjects.map(project => (
                                     <Grid key={project.id} item>
                                         <ProjectCard
                                             id={project.id}
                                             name={project.name}
+                                            picture={project.picture}
+                                            text={project.text}
                                         />
                                     </Grid>
                                 ))}
