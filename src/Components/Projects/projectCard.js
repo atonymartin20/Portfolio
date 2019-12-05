@@ -16,9 +16,8 @@ const styles = theme => ({
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        boxShadow: '1px 1px 4px #333, 2px 2px 7px #1565c0',
+        border: '1px solid #9AA297',
         minHeight: '330px',
-        // backgroundColor: '#1565c0dd',
         padding: 0,
         margin: 0,
         height: 'auto',
@@ -37,12 +36,15 @@ const styles = theme => ({
         backgroundColor: '#E2ECF7',
         padding: 0,
         margin: 0,
-        marginRight: -35,
+        // marginRight: -35,
         height: 'auto'
     },
     container: {
         width: '100%',
-        padding: '15px'
+        padding: '15px',
+        fontSize: '1.5rem',
+        display: 'flex',
+        flexWrap: 'wrap',
     },
     textField: {
         borderRadius: 6,
@@ -55,13 +57,8 @@ const styles = theme => ({
         position: 'relative'
     },
     title: {
-        fontSize: '1.6rem',
-        display: 'flex',
-        justifyContent: 'space-between',
-        fontFamily: 'Montserrat',
-        color: 'white',
-        textShadow: '1px 2px 3px #111',
-        marginBottom: 8
+        fontSize: '2.2rem',
+        marginBottom: 10
     },
     button: {
         backgroundColor: '#24D830',
@@ -78,24 +75,6 @@ const styles = theme => ({
         borderBottom: '1px solid #999',
         fontSize: '1rem'
     },
-    media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9,
-        marginTop: '30'
-    },
-    record: {
-        display: 'flex',
-        backgroundColor: 'white',
-        borderRadius: 7,
-        color: '#333',
-        marginTop: 12,
-        textShadow: '1px 1px 2px #aaa'
-    },
-    recordContent: {
-        fontSize: '.9rem',
-        marginRight: 10,
-        padding: '10px 5px'
-    },
 });
 
 class ProjectCard extends React.Component {
@@ -103,7 +82,8 @@ class ProjectCard extends React.Component {
         name: this.props.name,
         id: this.props.id,
         picture: this.props.picture,
-        text: this.props.text,
+        github: this.props.github,
+        deployedLink: this.props.deployedLink,
         isFlipped: false,
     };
 
@@ -131,26 +111,22 @@ class ProjectCard extends React.Component {
 
     render() {
         const { classes } = this.props;
-        const { name, picture } = this.state;
+        const { name, picture, github, deployedLink } = this.state;
         return (
             <div>
-                <h1>{name}</h1>
+                <h1 className={classes.title} onClick={this.ClickHandler}>{name}</h1>
                 <ReactCardFlip
                     isFlipped={this.state.isFlipped}
                     flipDirection="horizontal"
                 >
                     <Card className={classes.cardFront} key="front" onClick={this.ClickHandler}>
-                        <img src={picture} width='100%' height='100%' />
-                        {/* <CardContent className={classes.container}> */}
-                            {/* <Typography className={classes.title}>
-                                {name}
-                            </Typography> */}
-                        {/* </CardContent> */}
+                        <img src={picture} />
                     </Card>
 
                     <Card className={classes.cardBack} key="back">
                         <CardContent className={classes.container}>
-
+                            <span>{github}</span>
+                            {deployedLink}
                         </CardContent>
                         <CardActions>
                             <Button

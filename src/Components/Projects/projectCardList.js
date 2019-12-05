@@ -18,8 +18,8 @@ const styles = theme => ({
 class ProjectCardList extends React.Component {
     state = {
         groupProjects: [
-            { id: 1, name: 'League Management', picture: require('./images/LeagueManagement.jpg') },
-            { id: 2, name: 'TreasureHunt', picture: require('./images/TreasureHunt.jpg')}
+            { id: 1, name: 'League Management', picture: require('./images/LeagueManagement.jpg'), github: 'https://github.com/Lambda-School-Labs/labspt2-league-management', deployedLink: 'https://leaguemanagement.netlify.com/' },
+            { id: 2, name: 'TreasureHunt', picture: require('./images/TreasureHunt.jpg'), github: 'https://github.com/atonymartin20/TreasureHunt', deployedLink: 'https://dazzling-tesla-7c91b1.netlify.com/'}
         ],
         soloProjects: [
             { id: 1, name: 'I am a minon', picture: require('./images/TreasureHunt.jpg') }
@@ -40,7 +40,8 @@ class ProjectCardList extends React.Component {
                                             id={project.id}
                                             name={project.name}
                                             picture={project.picture}
-                                            text={project.text}
+                                            github={project.github}
+                                            deployedLink={project.deployedLink}
                                         />
                                     </Grid>
                                 ))}
@@ -63,7 +64,8 @@ class ProjectCardList extends React.Component {
                                             id={project.id}
                                             name={project.name}
                                             picture={project.picture}
-                                            text={project.text}
+                                            github={project.github}
+                                            deployedLink={project.deployedLink}
                                         />
                                     </Grid>
                                 ))}
