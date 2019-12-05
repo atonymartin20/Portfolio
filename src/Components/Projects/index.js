@@ -32,7 +32,7 @@ class Projects extends React.Component {
 
         return (
             <div className={classes.projectsDiv}>
-                <Navbar />
+                <Navbar type="black"/>
                 <header className={classes.projectHeader}>
                     <h1>Group Projects:</h1>
                     <ProjectCardList projectType="group"/>

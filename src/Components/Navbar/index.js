@@ -38,8 +38,28 @@ const styles = theme => ({
             padding: '0px 2%'
         }
     },
+    appBarBlack: {
+        display: "flex",
+        color: "black",
+        width: "100%",
+        boxShadow: "none",
+        transition: "all 500ms ease 0s",
+        alignItems: "center",
+        flexFlow: "row nowrap",
+        justifyContent: "space-between",
+        position: "fixed",
+        height: 65,
+        top: "0",
+        padding: "0px 4%",
+        fontSize: "2.5rem",
+        backgroundColor: "transparent",
+        [theme.breakpoints.down(710)]: {
+            padding: '0px 2%'
+        }
+    },
     backgroundBlue: {
-        backgroundColor: "#0E3386"
+        backgroundColor: "#0E3386",
+        color: 'white'
     },
     backgroundTransparent: {
         backgroundColor: "transparent"
@@ -266,7 +286,7 @@ class Navbar extends React.Component {
     NavbarChangeColor() {
         const { classes } = this.props;
         const windowsScrollTop = window.pageYOffset;
-        if (windowsScrollTop > 300) {
+        if (windowsScrollTop > 50) {
             document.body
                 .getElementsByTagName("header")[0]
                 .classList.remove(classes.backgroundTransparent);
@@ -296,7 +316,7 @@ class Navbar extends React.Component {
     }
 
     render() {
-        const { classes } = this.props;
+        const { classes, type } = this.props;
 
         const drawer = (
             <div>
@@ -346,80 +366,159 @@ class Navbar extends React.Component {
             </div>
         )
 
-        return (
-            <div className={classes.root}>
-                <AppBar className={classes.appBar}>
-                    <Toolbar className={classes.toolbar}>
-                        <Hidden implementation="css" className={classes.show710}>
-                            <IconButton
-                                color="inherit"
-                                aria-label="open drawer"
-                                onClick={this.handleDrawerToggle}
+        if (type === 'black') {
+            return (
+                <div className={classes.root}>
+                    <AppBar className={classes.appBarBlack}>
+                        <Toolbar className={classes.toolbar}>
+                            <Hidden implementation="css" className={classes.show710}>
+                                <IconButton
+                                    color="inherit"
+                                    aria-label="open drawer"
+                                    onClick={this.handleDrawerToggle}
+                                >
+                                    <MenuIcon className={classes.menuIconStyling} />
+                                </IconButton>
+                            </Hidden>
+                            <h1 className={classes.logo}>Alex Martin</h1>
+                            <Hidden implementation="css" className={classes.hide710}>
+                                <div>
+                                    <List className={classes.list}>
+                                        <ListItem className={classes.listItem}>
+                                            <Button
+                                                href='/'
+                                                className={classes.navLink}
+                                            >
+                                                Home
+                                            </Button>
+                                        </ListItem>
+                                        <ListItem className={classes.listItem}>
+                                            <Button
+                                                href='/projects'
+                                                className={classes.navLink}
+                                            >
+                                                Projects
+                                            </Button>
+                                        </ListItem>
+
+                                        <ListItem className={classes.listItem}>
+                                            <Button
+                                                href='/about'
+                                                className={classes.navLink}
+                                            >
+                                                About Me
+                                            </Button>
+                                        </ListItem>
+
+                                        <ListItem className={classes.listItem}>
+                                            <Button
+                                                href='/contact'
+                                                className={classes.navLink}
+                                            >
+                                                Contact Me
+                                            </Button>
+                                        </ListItem>
+                                    </List>
+                                </div>
+                            </Hidden>
+                        </Toolbar>
+                    </AppBar>
+
+                    <nav className={classes.drawer}>
+                        <Hidden smUp implementation="css">
+                            <Drawer
+                                variant="temporary"
+                                anchor={'left'}
+                                open={this.state.drawerOpen}
+                                onClose={this.handleDrawerToggle}
+                                classes={{
+                                    paper: classes.drawerPaper
+                                }}
                             >
-                                <MenuIcon className={classes.menuIconStyling}/>
-                            </IconButton>
+                                {drawer}
+                            </Drawer>
                         </Hidden>
-                        <h1 className={classes.logo}>Alex Martin</h1>
-                        <Hidden implementation="css" className={classes.hide710}>
-                            <div>
-                                <List className={classes.list}>
-                                    <ListItem className={classes.listItem}>
-                                        <Button
-                                            href='/'
-                                            className={classes.navLink}
-                                        >
-                                            Home
-                                        </Button>
-                                    </ListItem>
-                                    <ListItem className={classes.listItem}>
-                                        <Button
-                                            href='/projects'
-                                            className={classes.navLink}
-                                        >
-                                            Projects
-                                        </Button>
-                                    </ListItem>
+                    </nav>
+                </div>
+            );
+        }
 
-                                    <ListItem className={classes.listItem}>
-                                        <Button
-                                            href='/about'
-                                            className={classes.navLink}
-                                        >
-                                            About Me
-                                        </Button>
-                                    </ListItem>
+        else {
+            return (
+                <div className={classes.root}>
+                    <AppBar className={classes.appBar}>
+                        <Toolbar className={classes.toolbar}>
+                            <Hidden implementation="css" className={classes.show710}>
+                                <IconButton
+                                    color="inherit"
+                                    aria-label="open drawer"
+                                    onClick={this.handleDrawerToggle}
+                                >
+                                    <MenuIcon className={classes.menuIconStyling} />
+                                </IconButton>
+                            </Hidden>
+                            <h1 className={classes.logo}>Alex Martin</h1>
+                            <Hidden implementation="css" className={classes.hide710}>
+                                <div>
+                                    <List className={classes.list}>
+                                        <ListItem className={classes.listItem}>
+                                            <Button
+                                                href='/'
+                                                className={classes.navLink}
+                                            >
+                                                Home
+                                            </Button>
+                                        </ListItem>
+                                        <ListItem className={classes.listItem}>
+                                            <Button
+                                                href='/projects'
+                                                className={classes.navLink}
+                                            >
+                                                Projects
+                                            </Button>
+                                        </ListItem>
 
-                                    <ListItem className={classes.listItem}>
-                                        <Button
-                                            href='/contact'
-                                            className={classes.navLink}
-                                        >
-                                            Contact Me
-                                        </Button>
-                                    </ListItem>
-                                </List>
-                            </div>
+                                        <ListItem className={classes.listItem}>
+                                            <Button
+                                                href='/about'
+                                                className={classes.navLink}
+                                            >
+                                                About Me
+                                            </Button>
+                                        </ListItem>
+
+                                        <ListItem className={classes.listItem}>
+                                            <Button
+                                                href='/contact'
+                                                className={classes.navLink}
+                                            >
+                                                Contact Me
+                                            </Button>
+                                        </ListItem>
+                                    </List>
+                                </div>
+                            </Hidden>
+                        </Toolbar>
+                    </AppBar>
+
+                    <nav className={classes.drawer}>
+                        <Hidden smUp implementation="css">
+                            <Drawer
+                                variant="temporary"
+                                anchor={'left'}
+                                open={this.state.drawerOpen}
+                                onClose={this.handleDrawerToggle}
+                                classes={{
+                                    paper: classes.drawerPaper
+                                }}
+                            >
+                                {drawer}
+                            </Drawer>
                         </Hidden>
-                    </Toolbar>
-                </AppBar>
-
-                <nav className={classes.drawer}>
-                    <Hidden smUp implementation="css">
-                        <Drawer
-                            variant="temporary"
-                            anchor={'left'}
-                            open={this.state.drawerOpen}
-                            onClose={this.handleDrawerToggle}
-                            classes={{
-                                paper: classes.drawerPaper
-                            }}
-                        >
-                            {drawer}
-                        </Drawer>
-                    </Hidden>
-                </nav>
-            </div>
-        );
+                    </nav>
+                </div>
+            );
+        }
     }
 }
 

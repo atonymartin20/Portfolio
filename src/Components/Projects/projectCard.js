@@ -69,6 +69,7 @@ class ProjectCard extends React.Component {
         picture: this.props.picture,
         github: this.props.github,
         deployedLink: this.props.deployedLink,
+        description: this.props.description,
         isFlipped: false,
     };
 
@@ -96,7 +97,7 @@ class ProjectCard extends React.Component {
 
     render() {
         const { classes } = this.props;
-        const { name, picture, github, deployedLink } = this.state;
+        const { name, picture, github, deployedLink, description } = this.state;
         console.log(github)
         return (
             <div>
@@ -111,28 +112,37 @@ class ProjectCard extends React.Component {
 
                     <Card className={classes.cardBack} key="back">
                         <CardContent className={classes.container}>
-                            <span>{this.state.github}</span>
-                            {deployedLink}
+                            {description}
                         </CardContent>
                         <CardActions className={classes.test2}>
                             <Button
                                 size="large"
-                                type=""
-                                href={github}
+                                href={deployedLink}
+                                variant="contained"
                                 target="_blank"
+                                className={classes.button}
+
+                            >
+                                Link to {name}
+                            </Button>
+                            <Button
+                                size="large"
+                                href={github}
+                                variant="contained"
+                                target="_blank"
+                                className={classes.button}
+
                             >
                                 Github
                             </Button>
                             <Button
                                 size="large"
-                                fullWidth
-                                type="submit"
+                                onClick={this.EditHandler}
                                 variant="contained"
                                 className={classes.button}
-                                onClick={this.EditHandler}
                             >
                                 Save Team
-              </Button>
+                            </Button>
                         </CardActions>
                     </Card>
                 </ReactCardFlip>
