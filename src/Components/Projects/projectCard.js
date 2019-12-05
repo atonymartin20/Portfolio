@@ -17,27 +17,25 @@ const styles = theme => ({
         flexWrap: 'wrap',
         justifyContent: 'center',
         border: '1px solid #9AA297',
-        minHeight: '330px',
+        minHeight: 330,
         padding: 0,
         margin: 0,
         height: 'auto',
         marginBottom: '20px'
     },
     cardBack: {
-        minWidth: '285px',
-        maxWidth: '320px',
-        width: '45%',
+        width: 285,
         borderRadius: '10px',
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        boxShadow: '1px 1px 4px #333, 2px 2px 7px #1565c0',
-        minHeight: '375px',
-        backgroundColor: '#E2ECF7',
+        border: '1px solid #9AA297',
+        minHeight: 330,
         padding: 0,
         margin: 0,
-        // marginRight: -35,
-        height: 'auto'
+        height: 'auto',
+        marginBottom: '20px',
+        backgroundColor: '#E2ECF7',
     },
     container: {
         width: '100%',
@@ -45,16 +43,6 @@ const styles = theme => ({
         fontSize: '1.5rem',
         display: 'flex',
         flexWrap: 'wrap',
-    },
-    textField: {
-        borderRadius: 6,
-        boxShadow: '1px 1px 2px #333, 2px 2px 3px #1565c0cc',
-        height: 'auto'
-    },
-    textFieldBack: {
-        borderRadius: 6,
-        boxShadow: '1px 1px 2px #333, 2px 2px 3px #1565c0cc',
-        position: 'relative'
     },
     title: {
         fontSize: '2.2rem',
@@ -68,13 +56,10 @@ const styles = theme => ({
             backgroundColor: '#32C156'
         }
     },
-    header: {
-        display: 'inline-block',
-        padding: '0 3px',
-        marginBottom: 8,
-        borderBottom: '1px solid #999',
-        fontSize: '1rem'
-    },
+    test2: {
+        display: 'flex',
+        flexDirection: 'column'
+    }
 });
 
 class ProjectCard extends React.Component {
@@ -112,6 +97,7 @@ class ProjectCard extends React.Component {
     render() {
         const { classes } = this.props;
         const { name, picture, github, deployedLink } = this.state;
+        console.log(github)
         return (
             <div>
                 <h1 className={classes.title} onClick={this.ClickHandler}>{name}</h1>
@@ -125,10 +111,18 @@ class ProjectCard extends React.Component {
 
                     <Card className={classes.cardBack} key="back">
                         <CardContent className={classes.container}>
-                            <span>{github}</span>
+                            <span>{this.state.github}</span>
                             {deployedLink}
                         </CardContent>
-                        <CardActions>
+                        <CardActions className={classes.test2}>
+                            <Button
+                                size="large"
+                                type=""
+                                href={github}
+                                target="_blank"
+                            >
+                                Github
+                            </Button>
                             <Button
                                 size="large"
                                 fullWidth
