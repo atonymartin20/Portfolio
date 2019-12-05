@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ReactCardFlip from 'react-card-flip';
@@ -96,6 +97,7 @@ class ProjectCard extends React.Component {
     state = {
         name: this.props.name,
         id: this.props.id,
+        picture: this.props.picture,
         isFlipped: false,
     };
 
@@ -123,8 +125,8 @@ class ProjectCard extends React.Component {
 
     render() {
         const { classes } = this.props;
-        const { name } = this.state;
-
+        const { name, picture, text } = this.state;
+        console.log(this.state.name, this.state.picture, this.props.picture, this.props.text, this.props.name)
         return (
             <div>
                 <ReactCardFlip
@@ -137,6 +139,10 @@ class ProjectCard extends React.Component {
                             <Typography className={classes.title}>
                                 {name}
                             </Typography>
+                            <CardMedia
+                                // className={classes.media}
+                                image='/images/TreasureHunt.jpg'
+                                title="Paella dish" />
                         </CardContent>
                     </Card>
 

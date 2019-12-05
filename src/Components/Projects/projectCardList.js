@@ -3,6 +3,11 @@ import Grid from '@material-ui/core/Grid';
 import ProjectCard from './projectCard.js';
 import { withStyles } from '@material-ui/core/styles';
 
+// images
+import LeagueManagementIMG from './images/LeagueManagement.jpg';
+import test from '/'
+import TreasureHuntIMG from './images/TreasureHunt.jpg';
+
 const styles = theme => ({
     content: {
         height: 'auto',
@@ -14,10 +19,10 @@ const styles = theme => ({
 class ProjectCardList extends React.Component {
     state = {
         groupProjects: [
-            { id: 1, name: 'League Management', image: '' }
+            { id: 1, name: 'League Management', picture: './images/TreasureHunt.jpg', text: '...' }
         ],
         soloProjects: [
-            { name: 'I am a minon' }
+            { name: 'I am a minon', picture: './images/TreasureHunt.jpg', text: '...' }
         ]
     };
 
@@ -34,7 +39,8 @@ class ProjectCardList extends React.Component {
                                         <ProjectCard
                                             id={project.id}
                                             name={project.name}
-                                            image={project.image}
+                                            picture={project.picture}
+                                            text={project.text}
                                         />
                                     </Grid>
                                 ))}
