@@ -6,7 +6,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import EditIcon from '@material-ui/icons/Edit';
 import ReactCardFlip from 'react-card-flip';
 
 const styles = theme => ({
@@ -133,14 +132,10 @@ class ProjectCard extends React.Component {
                     flipDirection="horizontal"
                 >
                     {/* Card only flips when EditIcon is clicked. */}
-                    <Card className={classes.cardFront} key="front">
+                    <Card className={classes.cardFront} key="front" onClick={this.ClickHandler}>
                         <CardContent className={classes.container}>
                             <Typography className={classes.title}>
                                 {name}
-                                <EditIcon
-                                    onClick={this.ClickHandler}
-                                    style={{ cursor: 'pointer' }}
-                                />
                             </Typography>
                         </CardContent>
                     </Card>
