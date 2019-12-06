@@ -15,7 +15,7 @@ class ProjectCardList extends React.Component {
     state = {
         groupProjects: [
             { id: 1, name: 'League Management', picture: require('./images/LeagueManagement.jpg'), github: 'https://github.com/Lambda-School-Labs/labspt2-league-management', deployedLink: 'https://leaguemanagement.netlify.com/', description: 'test' },
-            { id: 2, name: 'TreasureHunt', picture: require('./images/TreasureHunt.jpg'), github: 'https://github.com/atonymartin20/TreasureHunt', deployedLink: 'https://dazzling-tesla-7c91b1.netlify.com/', description: 'test 2'}
+            { id: 2, name: 'Treasure Hunt', picture: require('./images/TreasureHunt.jpg'), github: 'https://github.com/atonymartin20/TreasureHunt', deployedLink: 'https://dazzling-tesla-7c91b1.netlify.com/', description: 'test 2'}
         ],
         soloProjects: [
             { id: 1, name: 'I am a minon', picture: require('./images/TreasureHunt.jpg') }
@@ -63,6 +63,7 @@ class ProjectCardList extends React.Component {
                                             picture={project.picture}
                                             github={project.github}
                                             deployedLink={project.deployedLink}
+                                            description={project.description}
                                         />
                                     </Grid>
                                 ))}
