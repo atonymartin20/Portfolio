@@ -8,8 +8,22 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ReactCardFlip from 'react-card-flip';
+import RefreshIcon from '@material-ui/icons/Refresh';
 
 const styles = theme => ({
+    button: {
+        backgroundColor: '#E59866',
+        borderRadius: '8px',
+        margin: 0,
+        // marginTop: '20px',
+        // marginLeft: 0,
+        fontSize: '1.3rem',
+        width: '100%',
+        '&:hover': {
+            backgroundColor: "#AA1649",
+            color: 'white'
+        }
+    },
     cardFront: {
         width: 285,
         borderRadius: '10px',
@@ -31,7 +45,7 @@ const styles = theme => ({
         justifyContent: 'center',
         border: '1px solid #9AA297',
         minHeight: 330,
-        padding: 0,
+        padding: 10,
         margin: 0,
         height: 'auto',
         marginBottom: '20px',
@@ -39,27 +53,24 @@ const styles = theme => ({
     },
     container: {
         width: '100%',
-        padding: '15px',
         fontSize: '1.5rem',
+        minHeight: 310,
+        padding: 0,
         display: 'flex',
-        flexWrap: 'wrap',
+        // flexWrap: 'wrap',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        // alignItems: 'space-between',
+        height: 'auto',
+    },
+    flipCard: {
+        alignSelf: 'flex-end',
     },
     title: {
         fontSize: '2.2rem',
         marginBottom: 10
     },
-    button: {
-        backgroundColor: '#24D830',
-        borderRadius: '8px',
-        fontFamily: 'Montserrat',
-        '&:hover': {
-            backgroundColor: '#32C156'
-        }
-    },
-    test2: {
-        display: 'flex',
-        flexDirection: 'column'
-    }
+
 });
 
 class ProjectCard extends React.Component {
@@ -84,11 +95,6 @@ class ProjectCard extends React.Component {
         this.setState({ [target.name]: target.value });
     };
 
-    EditHandler = async event => {
-        event.preventDefault();
-        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-    }
-
     handleChange = name => (event, { newValue }) => {
         this.setState({
             [name]: newValue
@@ -112,38 +118,34 @@ class ProjectCard extends React.Component {
 
                     <Card className={classes.cardBack} key="back">
                         <CardContent className={classes.container}>
-                            {description}
-                        </CardContent>
-                        <CardActions className={classes.test2}>
+                            <RefreshIcon onClick={this.ClickHandler} className={classes.flipCard} style={{ width: '20px', height: '20px', padding: '0px' }} />
+                            <span>{description}</span>
                             <Button
-                                size="large"
                                 href={deployedLink}
                                 variant="contained"
                                 target="_blank"
                                 className={classes.button}
-
                             >
                                 Link to {name}
                             </Button>
                             <Button
-                                size="large"
                                 href={github}
                                 variant="contained"
                                 target="_blank"
                                 className={classes.button}
-
                             >
                                 Github
                             </Button>
                             <Button
-                                size="large"
-                                onClick={this.EditHandler}
+                                href={github}
                                 variant="contained"
+                                target="_blank"
                                 className={classes.button}
                             >
-                                Save Team
+                                More information
                             </Button>
-                        </CardActions>
+
+                        </CardContent>
                     </Card>
                 </ReactCardFlip>
             </div>
