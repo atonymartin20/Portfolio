@@ -15,8 +15,6 @@ const styles = theme => ({
         backgroundColor: '#E59866',
         borderRadius: '8px',
         margin: 0,
-        // marginTop: '20px',
-        // marginLeft: 0,
         fontSize: '1.3rem',
         width: '100%',
         '&:hover': {
@@ -57,10 +55,8 @@ const styles = theme => ({
         minHeight: 310,
         padding: 0,
         display: 'flex',
-        // flexWrap: 'wrap',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        // alignItems: 'space-between',
         height: 'auto',
     },
     flipCard: {
@@ -137,7 +133,7 @@ class ProjectCard extends React.Component {
                                 Github
                             </Button>
                             <Button
-                                href={github}
+                                href={github} //Fix this to update to different page
                                 variant="contained"
                                 target="_blank"
                                 className={classes.button}
