@@ -39,6 +39,7 @@ class ProjectCardList extends React.Component {
                                             github={project.github}
                                             deployedLink={project.deployedLink}
                                             description={project.description}
+                                            
                                         />
                                     </Grid>
                                 ))}

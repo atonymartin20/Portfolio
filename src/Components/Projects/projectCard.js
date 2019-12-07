@@ -80,6 +80,7 @@ class ProjectCard extends React.Component {
         github: this.props.github,
         deployedLink: this.props.deployedLink,
         description: this.props.description,
+        additionalInfo: this.props.additionalInfo,
         isFlipped: false,
     };
 
@@ -102,8 +103,7 @@ class ProjectCard extends React.Component {
 
     render() {
         const { classes } = this.props;
-        const { name, picture, github, deployedLink, description } = this.state;
-        console.log(github)
+        const { name, picture, github, deployedLink, description, additionalInfo } = this.state;
         return (
             <div>
                 <h1 className={classes.title} onClick={this.ClickHandler}>{name}</h1>
@@ -136,7 +136,7 @@ class ProjectCard extends React.Component {
                                 Github
                             </Button>
                             <Button
-                                href={github} //Fix this to update to different page
+                                href={additionalInfo}
                                 variant="contained"
                                 target="_blank"
                                 className={classes.button}
