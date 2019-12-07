@@ -39,7 +39,7 @@ class ProjectCardList extends React.Component {
                                             github={project.github}
                                             deployedLink={project.deployedLink}
                                             description={project.description}
-                                            
+                                            additionalInfo={project.additionalInfo}
                                         />
                                     </Grid>
                                 ))}
@@ -65,6 +65,7 @@ class ProjectCardList extends React.Component {
                                             github={project.github}
                                             deployedLink={project.deployedLink}
                                             description={project.description}
+                                            additionalInfo={project.additionalInfo}
                                         />
                                     </Grid>
                                 ))}
@@ -73,14 +74,6 @@ class ProjectCardList extends React.Component {
                     </Grid>
                 </div>
             );
-        }
-
-        else {
-            return (
-                <div className={classes.content}>
-                    console.log('failure is eminent')
-                </div>
-            )
         }
     }
 }
