@@ -11,6 +11,9 @@ import ReactCardFlip from 'react-card-flip';
 import RefreshIcon from '@material-ui/icons/Refresh';
 
 const styles = theme => ({
+    alignLeft: {
+        textAlign: 'left'
+    },
     button: {
         backgroundColor: '#E59866',
         borderRadius: '8px',
@@ -115,7 +118,7 @@ class ProjectCard extends React.Component {
                     <Card className={classes.cardBack} key="back">
                         <CardContent className={classes.container}>
                             <RefreshIcon onClick={this.ClickHandler} className={classes.flipCard} style={{ width: '20px', height: '20px', padding: '0px' }} />
-                            <span>{description}</span>
+                            <span className={classes.alignLeft}>{description}</span>
                             <Button
                                 href={deployedLink}
                                 variant="contained"
