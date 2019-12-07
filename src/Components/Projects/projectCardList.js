@@ -14,7 +14,7 @@ const styles = theme => ({
 class ProjectCardList extends React.Component {
     state = {
         groupProjects: [
-            { id: 1, name: 'League Management', picture: require('./images/LeagueManagement.jpg'), github: 'https://github.com/Lambda-School-Labs/labspt2-league-management', deployedLink: 'https://leaguemanagement.netlify.com/', description: 'test' },
+            { id: 1, name: 'League Management', picture: require('./images/LeagueManagement.jpg'), github: 'https://github.com/Lambda-School-Labs/labspt2-league-management', deployedLink: 'https://leaguemanagement.netlify.com/', description: 'League Management is the fast easy solution to managing and organizing your sports leagues.' },
             { id: 2, name: 'Treasure Hunt', picture: require('./images/TreasureHunt.jpg'), github: 'https://github.com/atonymartin20/TreasureHunt', deployedLink: 'https://dazzling-tesla-7c91b1.netlify.com/', description: 'test 2'}
         ],
         soloProjects: [
