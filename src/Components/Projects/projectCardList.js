@@ -78,5 +78,4 @@ class ProjectCardList extends React.Component {
     }
 }
 
-// Commit 5
 export default withStyles(styles)(ProjectCardList);

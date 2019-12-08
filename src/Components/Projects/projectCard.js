@@ -12,7 +12,8 @@ import RefreshIcon from '@material-ui/icons/Refresh';
 
 const styles = theme => ({
     alignLeft: {
-        textAlign: 'left'
+        textAlign: 'left',
+        lineHeight: '1.25',
     },
     button: {
         backgroundColor: '#E59866',
@@ -133,7 +134,7 @@ class ProjectCard extends React.Component {
                                 target="_blank"
                                 className={classes.button}
                             >
-                                Github
+                                {name}'s Github
                             </Button>
                             <Button
                                 href={additionalInfo}
