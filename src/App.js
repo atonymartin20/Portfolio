@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Homepage from './Components/Homepage';
 import Projects from './Components/Projects';
 import LeagueManagementInfo from './Components/Projects/projectInfoPages/LeagueManagement.js';
+import TreasureHuntInfo from './Components/Projects/projectInfoPages/TreasureHunt.js';
 
 function App() {
     return (
@@ -17,6 +18,9 @@ function App() {
                 </Route>
                 <Route exact path='/projectInfoPages/LeagueManagement.js'>
                     <LeagueManagementInfo />
+                </Route>
+                <Route exact path='/projectInfoPages/TreasureHunt.js'>
+                    <TreasureHuntInfo />
                 </Route>
                 <Route>
                     <Homepage />

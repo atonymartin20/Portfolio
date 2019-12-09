@@ -1,7 +1,6 @@
 import React from 'react';
-import Navbar from '../Navbar';
+import Navbar from '../../Navbar';
 import withStyles from "@material-ui/core/styles/withStyles";
-import ProjectCardList from './projectCardList.js';
 
 const styles = () => ({
     projectsDiv: {
@@ -31,10 +30,7 @@ class TreasureHuntInfo extends React.Component {
             <div className={classes.projectsDiv}>
                 <Navbar type="black"/>
                 <header className={classes.projectHeader}>
-                    <h1>Group Projects:</h1>
-                    <ProjectCardList projectType="group"/>
-                    <h1>Solo Projects:</h1>
-                    <ProjectCardList projectType="solo"/>
+                    <h1>Treasure Hunt</h1>
                 </header>
             </div>
         )
