@@ -18,7 +18,7 @@ class ProjectCardList extends React.Component {
             { id: 2, name: 'Treasure Hunt', picture: require('./images/TreasureHunt.jpg'), github: 'https://github.com/atonymartin20/TreasureHunt', deployedLink: 'https://dazzling-tesla-7c91b1.netlify.com/', description: 'Treasure Hunt is a simple treasure hunting game where the user can traverse the island, collect treasure, unearth powerful artifacts, and more.', additionalInfo: './images/LeagueManagement.jpg' }
         ],
         soloProjects: [
-            { id: 1, name: 'I am a minon', picture: require('./images/TreasureHunt.jpg') }
+            { id: 1, name: 'Contacts App', picture: require('./images/ContactsApp.jpg'), github: 'TBD', deployedLink: 'TBD', description: 'TBD', additionalInfo: 'TBD' }
         ]
     };
 
