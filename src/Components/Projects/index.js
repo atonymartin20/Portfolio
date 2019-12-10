@@ -41,4 +41,5 @@ class Projects extends React.Component {
     }
 }
 
+// Green 1
 export default withStyles(styles)(Projects);
