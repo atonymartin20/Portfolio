@@ -2,7 +2,10 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Homepage from './Components/Homepage';
-// import Projects from './Components/Projects';
+import Projects from './Components/Projects';
+import LeagueManagementInfo from './Components/Projects/projectInfoPages/LeagueManagement.js';
+import TreasureHuntInfo from './Components/Projects/projectInfoPages/TreasureHunt.js';
+import ContactsAppInfo from './Components/Projects/projectInfoPages/ContactsApp.js';
 
 function App() {
     return (
@@ -11,9 +14,18 @@ function App() {
                 <Route exact path="/">
                     <Homepage />
                 </Route>
-                {/* <Route path="/projects">
+                <Route path="/projects">
                     <Projects />
-                </Route> */}
+                </Route>
+                <Route exact path='/projectInfoPages/LeagueManagement.js'>
+                    <LeagueManagementInfo />
+                </Route>
+                <Route exact path='/projectInfoPages/TreasureHunt.js'>
+                    <TreasureHuntInfo />
+                </Route>
+                <Route exact path='/projectInfoPages/ContactsApp.js'>
+                    <ContactsAppInfo />
+                </Route>
                 <Route>
                     <Homepage />
                 </Route>
