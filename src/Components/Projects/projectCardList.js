@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import ProjectCard from './projectCard.js';
 import { withStyles } from '@material-ui/core/styles';
-import LeagueDetails from './projectInfoPages/LeagueManagement.js';
 
 const styles = theme => ({
     content: {
