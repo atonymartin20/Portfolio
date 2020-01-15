@@ -2,11 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import ReactCardFlip from 'react-card-flip';
 import RefreshIcon from '@material-ui/icons/Refresh';
 
@@ -68,7 +65,8 @@ const styles = theme => ({
     },
     title: {
         fontSize: '2.2rem',
-        marginBottom: 10
+        marginBottom: 15,
+        marginTop: 10,
     },
 
 });
@@ -113,7 +111,7 @@ class ProjectCard extends React.Component {
                     flipDirection="horizontal"
                 >
                     <Card className={classes.cardFront} key="front" onClick={this.ClickHandler}>
-                        <img src={picture} />
+                        <img src={picture} alt='screenshot from project' />
                     </Card>
 
                     <Card className={classes.cardBack} key="back">

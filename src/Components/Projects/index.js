@@ -4,10 +4,13 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import ProjectCardList from './projectCardList.js';
 
 const styles = () => ({
+    marginTop: {
+        marginTop: '15px'
+    },
     projectsDiv: {
         width: '100%',
-        height: '2500px',
-        maxHeight: '200vh'
+        height: 'auto',
+        maxHeight: '300vh'
     },
     projectHeader: {
         boxSizing: 'border-box',
@@ -21,6 +24,7 @@ const styles = () => ({
         color: 'black',
         fontSize: '3.5rem',
     },
+
 })
 
 class Projects extends React.Component {
@@ -33,7 +37,7 @@ class Projects extends React.Component {
                 <header className={classes.projectHeader}>
                     <h1>Group Projects:</h1>
                     <ProjectCardList projectType="group"/>
-                    <h1>Solo Projects:</h1>
+                    <h1 className={classes.marginTop}>Solo Projects:</h1>
                     <ProjectCardList projectType="solo"/>
                 </header>
             </div>
