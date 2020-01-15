@@ -6,6 +6,7 @@ import Projects from './Components/Projects';
 import LeagueManagementInfo from './Components/Projects/projectInfoPages/LeagueManagement.js';
 import TreasureHuntInfo from './Components/Projects/projectInfoPages/TreasureHunt.js';
 import ContactsAppInfo from './Components/Projects/projectInfoPages/ContactsApp.js';
+import BaseballProject from './Components/Projects/projectInfoPages/BaseballProject.js'
 
 function App() {
     return (
@@ -25,6 +26,9 @@ function App() {
                 </Route>
                 <Route exact path='/projectInfoPages/ContactsApp.js'>
                     <ContactsAppInfo />
+                </Route>
+                <Route exact path='/projectInfoPages/BaseballProject.js'>
+                    <BaseballProject />
                 </Route>
                 <Route>
                     <Homepage />
