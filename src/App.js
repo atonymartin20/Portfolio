@@ -7,6 +7,8 @@ import LeagueManagementInfo from './Components/Projects/projectInfoPages/LeagueM
 import TreasureHuntInfo from './Components/Projects/projectInfoPages/TreasureHunt.js';
 import ContactsAppInfo from './Components/Projects/projectInfoPages/ContactsApp.js';
 import BaseballProject from './Components/Projects/projectInfoPages/BaseballProject.js'
+import AboutMe from './Components/AboutMe';
+import ContactMe from './Components/ContactMe';
 
 function App() {
     return (
@@ -29,6 +31,12 @@ function App() {
                 </Route>
                 <Route exact path='/projectInfoPages/BaseballProject.js'>
                     <BaseballProject />
+                </Route>
+                <Route path="/about">
+                    <AboutMe />
+                </Route>
+                <Route path="/contact">
+                    <ContactMe />
                 </Route>
                 <Route>
                     <Homepage />
