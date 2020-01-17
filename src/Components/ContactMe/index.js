@@ -12,7 +12,6 @@ const styles = () => ({
     contactMeHeader: {
         boxSizing: 'border-box',
         textAlign: 'center',
-        // backgroundColor: 'rgba(43, 43, 43, 0.1)',
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
@@ -23,19 +22,21 @@ const styles = () => ({
         color: 'black',
         fontSize: '3.5rem',
     },
-    homepageHeaderText: {
+    contactMeHeaderText: {
         marginTop: '10px',
         marginBottom: '10px',
-        backgroundColor: 'orange',
         height: 100,
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
     },
+    emailIconStyling: {
+        height: 50,
+        width: 50,
+    },
     iconStyling: {
         height: 50,
         width: 50,
-        backgroundColor: 'blue',
     },
     linkStyling: {
         color: 'black',
@@ -52,8 +53,8 @@ class AboutMe extends React.Component {
                 <Navbar />
                     <header className={classes.contactMeHeader}>
 
-                        <h1 className={classes.homepageHeaderText}><EmailRoundedIcon className={classes.iconStyling}/>    <a href="mailto:atonymartin20@yahoo.com" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"> atonymartin20@yahoo.com</a></h1>
-                        <h1 className={classes.homepageHeaderText}><a href="https://www.linkedin.com/in/alex-martin-adm" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"><LinkedInIcon className={classes.iconStyling}/></a></h1>
+                        <h1 className={classes.contactMeHeaderText}><EmailRoundedIcon className={classes.emailIconStyling} color='primary' />    <a href="mailto:atonymartin20@yahoo.com" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"> atonymartin20@yahoo.com</a></h1>
+                        <h1 className={classes.contactMeHeaderText}><a href="https://www.linkedin.com/in/alex-martin-adm" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"><LinkedInIcon className={classes.iconStyling} style={{ color: '#0077B5' }} /></a></h1>
                         
                     </header>
             </div>
