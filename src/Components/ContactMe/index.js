@@ -52,8 +52,8 @@ class AboutMe extends React.Component {
                 <Navbar />
                     <header className={classes.contactMeHeader}>
 
-                        <h1 className={classes.homepageHeaderText}><EmailRoundedIcon className={classes.iconStyling}/>    <a href="mailto:atonymartin20@yahoo.com" className={classes.linkStyling} target="_blank"> atonymartin20@yahoo.com</a></h1>
-                        <h1 className={classes.homepageHeaderText}><a href="https://www.linkedin.com/in/alex-martin-adm" className={classes.linkStyling} target="_blank"><LinkedInIcon className={classes.iconStyling}/></a></h1>
+                        <h1 className={classes.homepageHeaderText}><EmailRoundedIcon className={classes.iconStyling}/>    <a href="mailto:atonymartin20@yahoo.com" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"> atonymartin20@yahoo.com</a></h1>
+                        <h1 className={classes.homepageHeaderText}><a href="https://www.linkedin.com/in/alex-martin-adm" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"><LinkedInIcon className={classes.iconStyling}/></a></h1>
                         
                     </header>
             </div>
