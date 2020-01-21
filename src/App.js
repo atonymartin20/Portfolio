@@ -52,3 +52,5 @@ export default App;
 // 2. Finish About Me Page
 // 3. Check styling of Navbar
 // 4. Consider adding another solo project
+// 5. Check responsiveness
+// 6. Upload website
