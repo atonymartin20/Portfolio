@@ -49,3 +49,4 @@ function App() {
 export default App;
 
 // 1. Finish contact page
+// 2. Finish About Me Page
