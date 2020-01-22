@@ -3,22 +3,12 @@ import Navbar from '../Navbar';
 import withStyles from "@material-ui/core/styles/withStyles";
 
 const styles = () => ({
-    githubButton: {
-        backgroundColor: '#0E3386',
-        color: 'white',
-        border: '1px solid white',
-        marginTop: '15px',
-        fontSize: '2rem',
-        "&:hover": {
-            backgroundColor: "#AA1649",
-        },
-    },
     aboutMeDiv: {
         width: '100%',
         height: '100%',
         maxHeight: '200vh'
     },
-    homepageHeader: {
+    aboutMeHeader: {
         boxSizing: 'border-box',
         textAlign: 'center',
         backgroundColor: 'rgba(43, 43, 43, 0.1)',
@@ -33,7 +23,7 @@ const styles = () => ({
         color: 'white',
         fontSize: '3.5rem',
     },
-    homepageHeaderText: {
+    aboutMeHeaderText: {
         marginTop: '10px',
         marginBottom: '10px',
     },
@@ -47,7 +37,7 @@ class AboutMe extends React.Component {
         return (
             <div className={classes.aboutMeDiv}>
                 <Navbar type='black' />
-                    <header className={classes.contactMeHeader}>
+                    <header className={classes.aboutMeHeader}>
 
                     </header>
             </div>
