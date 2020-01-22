@@ -7,6 +7,8 @@ import LeagueManagementInfo from './Components/Projects/projectInfoPages/LeagueM
 import TreasureHuntInfo from './Components/Projects/projectInfoPages/TreasureHunt.js';
 import ContactsAppInfo from './Components/Projects/projectInfoPages/ContactsApp.js';
 import BaseballProject from './Components/Projects/projectInfoPages/BaseballProject.js'
+import AboutMe from './Components/AboutMe';
+import ContactMe from './Components/ContactMe';
 
 function App() {
     return (
@@ -30,6 +32,12 @@ function App() {
                 <Route exact path='/projectInfoPages/BaseballProject.js'>
                     <BaseballProject />
                 </Route>
+                <Route path="/about">
+                    <AboutMe />
+                </Route>
+                <Route path="/contact">
+                    <ContactMe />
+                </Route>
                 <Route>
                     <Homepage />
                 </Route>
@@ -39,3 +47,9 @@ function App() {
 }
 
 export default App;
+
+// 2. Finish About Me Page
+// 3. Check styling of Navbar
+// 4. Consider adding another solo project
+// 5. Check responsiveness
+// 6. Upload website
