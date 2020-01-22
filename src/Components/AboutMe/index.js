@@ -56,3 +56,16 @@ class AboutMe extends React.Component {
 }
 
 export default withStyles(styles)(AboutMe);
+
+// About Me 
+// Profile picture
+//  Professional
+//  Solo headshot 
+//  No hats, sunglasses, or distracting clothes/background
+// Full name
+//  No nicknames or gamer tags
+// Personal Mission Statement
+//  Mission Statement must be approved by Career Coach (you can use the summary you wrote in your Linkedin summary, for example)
+
+//  Skills
+// List out your main technical skills 
