@@ -5,7 +5,7 @@ import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
-const styles = theme=> ({
+const styles = theme => ({
     contactMeDiv: {
         width: '100%',
     },
@@ -34,7 +34,6 @@ const styles = theme=> ({
     contactMeHeaderText: {
         marginTop: '10px',
         marginBottom: '10px',
-        height: 100,
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',

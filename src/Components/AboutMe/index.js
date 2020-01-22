@@ -2,30 +2,57 @@ import React from 'react';
 import Navbar from '../Navbar';
 import withStyles from "@material-ui/core/styles/withStyles";
 
-const styles = () => ({
+const styles = theme => ({
     aboutMeDiv: {
         width: '100%',
         height: '100%',
-        maxHeight: '200vh'
+        maxHeight: '200vh',
+    },
+    aboutMeH1: {
+        fontSize: '4.5rem',
+        margin: '0 auto',
+        [theme.breakpoints.down(800)]: {
+            fontSize: '4.0rem',
+        },
+        [theme.breakpoints.down(600)]: {
+            fontSize: '3.5rem',
+        },
     },
     aboutMeHeader: {
         boxSizing: 'border-box',
         textAlign: 'center',
-        backgroundColor: 'rgba(43, 43, 43, 0.1)',
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
+        maxWidth: 1000,
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
         padding: '100px 2.5%',
-        textShadow: '1px 1px 2px black, 1px 0px 2px black, 0px 1px 2px black, 0 0 8px #333',
         height: '600px',
-        color: 'white',
-        fontSize: '3.5rem',
+        color: 'black',
+        fontSize: '3.0rem',
+        margin: '0 auto',
     },
     aboutMeHeaderText: {
         marginTop: '10px',
         marginBottom: '10px',
+        height: 100,
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        textAlign: 'left',
+        [theme.breakpoints.down(800)]: {
+            fontSize: '2.5rem',
+        },
+        [theme.breakpoints.down(600)]: {
+            fontSize: '2.2rem',
+        },
+        [theme.breakpoints.down(500)]: {
+            fontSize: '2.0rem',
+        },
+        [theme.breakpoints.down(400)]: {
+            fontSize: '1.7rem',
+        },
     },
 
 })
@@ -38,7 +65,10 @@ class AboutMe extends React.Component {
             <div className={classes.aboutMeDiv}>
                 <Navbar type='black' />
                     <header className={classes.aboutMeHeader}>
+                        <h1 className={classes.aboutMeH1}>About Me</h1>
+                        <h1 className={classes.aboutMeHeaderText}>I don't want to fucking type this.</h1>
 
+                        
                     </header>
             </div>
         )
@@ -47,7 +77,6 @@ class AboutMe extends React.Component {
 
 export default withStyles(styles)(AboutMe);
 
-// About Me 
 // Profile picture
 //  Professional
 //  Solo headshot 
