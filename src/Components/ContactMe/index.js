@@ -9,13 +9,22 @@ const styles = theme=> ({
     contactMeDiv: {
         width: '100%',
     },
+    contactMeH1: {
+        fontSize: '4.5rem',
+        [theme.breakpoints.down(800)]: {
+            fontSize: '4.0rem',
+        },
+        [theme.breakpoints.down(600)]: {
+            fontSize: '3.5rem',
+        },
+    },
     contactMeHeader: {
         boxSizing: 'border-box',
         textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         padding: '100px 2.5%',
         height: '600px',
@@ -74,7 +83,7 @@ class AboutMe extends React.Component {
             <div className={classes.contactMeDiv}>
                 <Navbar type="black"/>
                     <header className={classes.contactMeHeader}>
-
+                        <h1 className={classes.contactMeH1}>Contact Me</h1>
                         <h1 className={classes.contactMeHeaderText}><EmailRoundedIcon className={classes.emailIconStyling} color='primary' />    <a href="mailto:atonymartin20@yahoo.com" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"> atonymartin20@yahoo.com</a></h1>
                         <h1 className={classes.contactMeHeaderTextIcons}><a href="https://www.linkedin.com/in/alex-martin-adm" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"><LinkedInIcon className={classes.iconStyling} style={{ color: '#0077B5' }} /></a> <a href="https://github.com/atonymartin20" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"><GitHubIcon className={classes.iconStyling} style={{ color: '#5E227F' }} /></a></h1>
                     </header>
