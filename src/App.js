@@ -48,7 +48,6 @@ function App() {
 
 export default App;
 
-// 1. Finish contact page
 // 2. Finish About Me Page
 // 3. Check styling of Navbar
 // 4. Consider adding another solo project

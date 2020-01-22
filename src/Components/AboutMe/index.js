@@ -1,8 +1,6 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import withStyles from "@material-ui/core/styles/withStyles";
-import HomepageImageBackground from '../../Images/HomepageImage.jpg';
-import Button from "@material-ui/core/Button";
 
 const styles = () => ({
     githubButton: {
@@ -15,7 +13,7 @@ const styles = () => ({
             backgroundColor: "#AA1649",
         },
     },
-    homepageDiv: {
+    aboutMeDiv: {
         width: '100%',
         height: '100%',
         maxHeight: '200vh'
@@ -39,14 +37,7 @@ const styles = () => ({
         marginTop: '10px',
         marginBottom: '10px',
     },
-    homepageTopImg: {
-        backgroundImage: `url(${HomepageImageBackground})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        height: '600px',
-    },
+
 })
 
 class AboutMe extends React.Component {
@@ -54,22 +45,11 @@ class AboutMe extends React.Component {
         const { classes } = this.props;
 
         return (
-            <div className={classes.homepageDiv}>
-                <Navbar />
-                <div className={classes.homepageTopImg}>
-                    <header className={classes.homepageHeader}>
-                        <h1 className={classes.homepageHeaderText}>Alex Martin</h1>
-                        <h1 className={classes.homepageHeaderText}>Full Stack Web Developer</h1>
-                        <Button
-                            variant="contained"
-                            href='https://github.com/atonymartin20'
-                            target="_blank"
-                            className={classes.githubButton}
-                        >
-                            Github
-                        </Button>
+            <div className={classes.aboutMeDiv}>
+                <Navbar type='black' />
+                    <header className={classes.contactMeHeader}>
+
                     </header>
-                </div>
             </div>
         )
     }
