@@ -92,3 +92,11 @@ class AboutMe extends React.Component {
 }
 
 export default withStyles(styles)(AboutMe);
+
+// Linked in
+// Github
+// Icon with email typed out
+// center components
+
+//  front desk ticket
+// frontdesk
