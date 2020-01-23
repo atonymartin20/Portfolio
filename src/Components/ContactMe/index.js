@@ -56,7 +56,8 @@ const styles = theme => ({
         marginTop: '10px',
         marginBottom: '10px',
         display: 'flex',
-        justifyContent: 'space-between',
+        flexDirection: 'column',
+        justifyContent: 'center',
         alignItems: 'center',
     },
     emailIconStyling: {
@@ -92,8 +93,3 @@ class AboutMe extends React.Component {
 }
 
 export default withStyles(styles)(AboutMe);
-
-// Linked in
-// Github
-// Icon with email typed out
-// center components
