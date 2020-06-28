@@ -126,10 +126,3 @@ class AboutMe extends React.Component {
 }
 
 export default withStyles(styles)(AboutMe);
-
-
-// Personal Mission Statement
-//  Mission Statement must be approved by Career Coach (you can use the summary you wrote in your Linkedin summary, for example)
-
-//  Skills
-// List out your main technical skills 
