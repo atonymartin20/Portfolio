@@ -6,7 +6,8 @@ import Projects from './Components/Projects';
 import LeagueManagementInfo from './Components/Projects/projectInfoPages/LeagueManagement.js';
 import TreasureHuntInfo from './Components/Projects/projectInfoPages/TreasureHunt.js';
 import ContactsAppInfo from './Components/Projects/projectInfoPages/ContactsApp.js';
-import BaseballProject from './Components/Projects/projectInfoPages/BaseballProject.js'
+import BaseballProject from './Components/Projects/projectInfoPages/BaseballProject.js';
+import HeroGame from './Components/Projects/projectInfoPages/HeroGame.js';
 import AboutMe from './Components/AboutMe';
 import ContactMe from './Components/ContactMe';
 
@@ -20,17 +21,20 @@ function App() {
                 <Route path="/projects">
                     <Projects />
                 </Route>
-                <Route exact path='/projectInfoPages/LeagueManagement.js'>
+                <Route exact path='/projectInfoPages/LeagueManagement'>
                     <LeagueManagementInfo />
                 </Route>
-                <Route exact path='/projectInfoPages/TreasureHunt.js'>
+                <Route exact path='/projectInfoPages/TreasureHunt'>
                     <TreasureHuntInfo />
                 </Route>
-                <Route exact path='/projectInfoPages/ContactsApp.js'>
+                <Route exact path='/projectInfoPages/ContactsApp'>
                     <ContactsAppInfo />
                 </Route>
-                <Route exact path='/projectInfoPages/BaseballProject.js'>
+                <Route exact path='/projectInfoPages/BaseballProject'>
                     <BaseballProject />
+                </Route>
+                <Route exact path='/projectInfoPages/HeroGame'>
+                    <HeroGame />
                 </Route>
                 <Route path="/about">
                     <AboutMe />
