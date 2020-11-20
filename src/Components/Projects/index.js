@@ -39,6 +39,8 @@ class Projects extends React.Component {
                     <ProjectCardList projectType="group"/>
                     <h1 className={classes.marginTop}>Solo Projects:</h1>
                     <ProjectCardList projectType="solo"/>
+                    <h1 className={classes.marginTop}>Front End Only:</h1>
+                    <ProjectCardList projectType="frontEnd"/>
                 </header>
             </div>
         )
