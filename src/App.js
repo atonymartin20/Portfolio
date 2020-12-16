@@ -8,6 +8,7 @@ import TreasureHuntInfo from './Components/Projects/projectInfoPages/TreasureHun
 import ContactsAppInfo from './Components/Projects/projectInfoPages/ContactsApp.js';
 import BaseballProject from './Components/Projects/projectInfoPages/BaseballProject.js';
 import HeroGame from './Components/Projects/projectInfoPages/HeroGame.js';
+import RRockPaperScissors from './Components/Projects/projectInfoPages/RockPaperScissors.js';
 import AboutMe from './Components/AboutMe';
 import ContactMe from './Components/ContactMe';
 
@@ -29,6 +30,9 @@ function App() {
                 </Route>
                 <Route exact path='/projectInfoPages/ContactsApp'>
                     <ContactsAppInfo />
+                </Route>
+                <Route exact path='/projectInfoPages/RockPaperScissors'>
+                    <RockPaperScissors />
                 </Route>
                 <Route exact path='/projectInfoPages/BaseballProject'>
                     <BaseballProject />
