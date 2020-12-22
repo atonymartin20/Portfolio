@@ -84,7 +84,7 @@ class AboutMe extends React.Component {
                     <header className={classes.contactMeHeader}>
                         <h1 className={classes.contactMeH1}>Contact Me</h1>
                         <h1 className={classes.contactMeHeaderTextIcons}> <a href="https://github.com/atonymartin20" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"><GitHubIcon className={classes.iconStyling} style={{ color: '#5E227F' }} /></a></h1>
-                        <h1 className={classes.contactMeHeaderText}><EmailRoundedIcon className={classes.emailIconStyling} color='primary' />    <a href="mailto:atonymartin20@yahoo.com" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"> atonymartin20@yahoo.com</a></h1>
+                        <h1 className={classes.contactMeHeaderText}><EmailRoundedIcon className={classes.emailIconStyling} color='primary' />    <a href="mailto:admartin@admartin.dev" className={classes.linkStyling} target="_blank"  rel="noopener noreferrer"> admartin@admartin.dev</a></h1>
                     </header>
             </div>
         )
