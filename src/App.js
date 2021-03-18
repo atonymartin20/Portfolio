@@ -9,6 +9,8 @@ import ContactsAppInfo from './Components/Projects/projectInfoPages/ContactsApp.
 import BaseballProject from './Components/Projects/projectInfoPages/BaseballProject.js';
 import HeroGame from './Components/Projects/projectInfoPages/HeroGame.js';
 import RockPaperScissors from './Components/Projects/projectInfoPages/RockPaperScissors.js';
+import SandwichShoppe from './Components/Projects/projectInfoPages/SandwichShoppe.js';
+import CoffeeRoasters from './Components/Projects/projectInfoPages/CoffeeRoasters.js';
 import AboutMe from './Components/AboutMe';
 import ContactMe from './Components/ContactMe';
 
@@ -37,6 +39,12 @@ function App() {
                 <Route exact path='/projectInfoPages/BaseballProject'>
                     <BaseballProject />
                 </Route>
+                <Route exact path='/projectInfoPages/SandwichShoppe'>
+                    <SandwichShoppe />
+                </Route>
+                <Route exact path='/projectInfoPages/CoffeeRoasters'>
+                    <CoffeeRoasters />
+                </Route>
                 <Route exact path='/projectInfoPages/HeroGame'>
                     <HeroGame />
                 </Route>
@@ -55,9 +63,3 @@ function App() {
 }
 
 export default App;
-
-// 2. Finish About Me Page
-// 3. Check styling of Navbar
-// 4. Consider adding another solo project
-// 5. Check responsiveness
-// 6. Upload website
