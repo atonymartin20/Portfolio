@@ -41,7 +41,7 @@ const styles = () => ({
     },
 })
 
-class BaseballProject extends React.Component {
+class CoffeeRoasters extends React.Component {
     render() {
         const { classes } = this.props;
 
@@ -50,19 +50,18 @@ class BaseballProject extends React.Component {
                 <Navbar type="black" />
                 <header className={classes.projectHeader}>
                     <div className={classes.projectsInsideDiv}>
-                        <h1>Baseball Project</h1>
+                        <h1>Coffee Roasters</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Solo</p>
+                        <p className={classes.insideText}>&emsp;Front End Only</p>
 
                         <p className={classes.stack}>Purpose:</p>
-                        <p className={classes.insideText}>&emsp;This is a project that I have wanted to build for a while, and I will continue to improve and update this project.  I designed this project to combine the information that I use from baseball statistical website Baseball Reference, Fangraphs, and Baseball Savant into one quick website.  This allows a user to quickly see how a player's traits have changed over the past four seasons.</p>
+                        <p className={classes.insideText}>&emsp;I wanted to build a project that had more of a corporate feel.  I found the framework for this project on Frontend Mentor, and it fit what I was looking for.</p>
 
                         <p className={classes.stack}>Role:</p>
-                        <p className={classes.insideText}>&emsp;As a solo project, I designed, built, and styled the entire project.</p>
+                        <p className={classes.insideText}>&emsp;Frontend Mentor provided the style-guide, figma files, and image assets.  I built the rest of the project.</p>
 
                         <p className={classes.stack}>Tech Stack:</p>
-                        <p className={classes.insideText}>&emsp;On the frontend I used React, MaterialUI, ContextAPI, some React Hooks, and axios.  This allows consistent state management and a quick and reliable framework.</p>
-                        <p className={classes.insideText}>&emsp;On the backend I used Node, Express, PostgresQL, and Knex.  This allowed the entire project to be written in Javascript while having a large database.</p>
+                        <p className={classes.insideText}>&emsp;This project was built using React, Redux, and SASS.</p>
                     </div>
                 </header>
             </div>
@@ -70,4 +69,4 @@ class BaseballProject extends React.Component {
     }
 }
 
-export default withStyles(styles)(BaseballProject);
+export default withStyles(styles)(CoffeeRoasters);

@@ -1,19 +1,19 @@
 {
   "name": "portfolio",
-  "homepage": "http://admartin.me/",
   "version": "0.1.0",
   "private": true,
   "repository": "https://github.com/atonymartin20/Portfolio.git",
+  "homepage": "https://admartin.dev",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "@material-ui/icons": "^4.5.1",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
-    "react": "^16.11.0",
+    "react": "^17.0.1",
     "react-card-flip": "^1.0.10",
-    "react-dom": "^16.11.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
     "styled-components": "^4.4.1"
   },
   "scripts": {

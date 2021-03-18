@@ -6,6 +6,14 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import ReactCardFlip from 'react-card-flip';
 import RefreshIcon from '@material-ui/icons/Refresh';
+import LeagueManagementIMG from './images/LeagueManagement.jpg';
+import TreasureHuntIMG from './images/TreasureHunt.jpg';
+import BaseballProjectIMG from './images/BaseballProject.jpg';
+import ContactsAppIMG from './images/ContactsApp.jpg';
+import HeroGameIMG from './images/HeroGame.jpg';
+import CoffeeRoastersIMG from './images/CoffeeRoasters.jpg';
+import RockPaperScissorsIMG from './images/RockPaperScissors.png';
+import SandwichShoppeIMG from './images/SandwichShoppe.jpg';
 
 const styles = theme => ({
     alignLeft: {
@@ -75,7 +83,6 @@ class ProjectCard extends React.Component {
     state = {
         name: this.props.name,
         id: this.props.id,
-        picture: this.props.picture,
         github: this.props.github,
         deployedLink: this.props.deployedLink,
         description: this.props.description,
@@ -102,7 +109,7 @@ class ProjectCard extends React.Component {
 
     render() {
         const { classes } = this.props;
-        const { name, picture, github, deployedLink, description, additionalInfo } = this.state;
+        const { name, github, deployedLink, description, additionalInfo } = this.state;
         return (
             <div>
                 <h1 className={classes.title} onClick={this.ClickHandler}>{name}</h1>
@@ -111,7 +118,14 @@ class ProjectCard extends React.Component {
                     flipDirection="horizontal"
                 >
                     <Card className={classes.cardFront} key="front" onClick={this.ClickHandler}>
-                        <img src={picture} alt='screenshot from project' />
+                        {this.state.name === 'League Management' ? <img src={LeagueManagementIMG} alt='screenshot from project' /> : null }
+                        {this.state.name === 'Treasure Hunt' ? <img src={TreasureHuntIMG} alt='screenshot from project' /> : null }
+                        {this.state.name === 'Baseball Project' ? <img src={BaseballProjectIMG} alt='screenshot from project' /> : null }
+                        {this.state.name === 'Contacts App' ? <img src={ContactsAppIMG} alt='screenshot from project' /> : null }
+                        {this.state.name === 'Hero Game' ? <img src={HeroGameIMG} alt='screenshot from project' /> : null }
+                        {this.state.name === 'Coffee-roasters' ? <img src={CoffeeRoastersIMG} alt='screenshot from project' /> : null }
+                        {this.state.name === 'Rock Paper Scissors' ? <img src={RockPaperScissorsIMG} alt='screenshot from project' /> : null }
+                        {this.state.name === 'Sandwich Shoppe' ? <img src={SandwichShoppeIMG} alt='screenshot from project' /> : null }
                     </Card>
 
                     <Card className={classes.cardBack} key="back">
