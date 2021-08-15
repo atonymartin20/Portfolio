@@ -25,7 +25,9 @@ class ProjectCardList extends React.Component {
         frontendOnlyProjects: [
             { id: 1, name: 'Coffee-roasters', github: 'https://github.com/atonymartin20/coffee-roasters', deployedLink: 'https://coffeeroasters-adm.netlify.app/', description: 'Coffeeroasters is a simple online coffee retailer that specializes in quick and efficient delivery of our premium roast coffee.', additionalInfo: './projectInfoPages/CoffeeRoasters' },
             { id: 2, name: 'Rock Paper Scissors', github: 'https://github.com/atonymartin20/rock-paper-scissors', deployedLink: 'https://rock-paper-scissors-adm.netlify.app/', description: 'Rock Paper Scissors has 2 modes.  First is basic mode which is your typical rock paper scissors gameplay.  Advanced mode adds Lizard and Spock for increased difficulty.', additionalInfo: './projectInfoPages/RockPaperScissors' },
-            { id: 3, name: 'Sandwich Shoppe', github: 'https://github.com/atonymartin20/sandwich-shoppe', deployedLink: 'https://sandwich-shoppe-adm.netlify.app', description: 'Sandwich Shoppe is designed for your local sandwich shoppe.  Order online or just browse all that we have to offer.', additionalInfo: './projectInfoPages/SandwichShoppe' }
+            { id: 3, name: 'Sandwich Shoppe', github: 'https://github.com/atonymartin20/sandwich-shoppe', deployedLink: 'https://sandwich-shoppe-adm.netlify.app', description: 'Sandwich Shoppe is designed for your local sandwich shoppe.  Order online or just browse all that we have to offer.', additionalInfo: './projectInfoPages/SandwichShoppe' },
+            { id: 4, name: 'Invoice App', github: 'https://github.com/atonymartin20/invoice-app', deployedLink: 'https://invoice-app-adm.netlify.app/', description: 'Invoice App is an invoice tracker that can keep track of a companies invoices and easily show all active invoices.', additionalInfo: './projectInfoPages/InvoiceApp' }
+
             // { id: 9999, name: '', picture: ('image is 285 x 330'), github: '', deployedLink: '', description: '', additionalInfo: '' },
         ]
     };
