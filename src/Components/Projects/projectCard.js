@@ -15,6 +15,7 @@ import CoffeeRoastersIMG from './images/CoffeeRoasters.jpg';
 import RockPaperScissorsIMG from './images/RockPaperScissors.png';
 import SandwichShoppeIMG from './images/SandwichShoppe.jpg';
 import InvoiceAppIMG from './images/InvoiceApp.jpg';
+import PhotosnapIMG from './images/Photosnap.jpg';
 
 const styles = theme => ({
     alignLeft: {
@@ -128,6 +129,8 @@ class ProjectCard extends React.Component {
                         {this.state.name === 'Rock Paper Scissors' ? <img src={RockPaperScissorsIMG} alt='screenshot from project' /> : null }
                         {this.state.name === 'Sandwich Shoppe' ? <img src={SandwichShoppeIMG} alt='screenshot from project' /> : null }
                         {this.state.name === 'Invoice App' ? <img src={InvoiceAppIMG} alt='screenshot from project' /> : null }
+                        {this.state.name === 'Photosnap' ? <img src={PhotosnapIMG} alt='screenshot from project' /> : null }
+
                     </Card>
 
                     <Card className={classes.cardBack} key="back">
