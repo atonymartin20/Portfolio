@@ -13,6 +13,7 @@ import SandwichShoppe from './Components/Projects/projectInfoPages/SandwichShopp
 import CoffeeRoasters from './Components/Projects/projectInfoPages/CoffeeRoasters.js';
 import InvoiceApp from './Components/Projects/projectInfoPages/InvoiceApp.js';
 import Photosnap from './Components/Projects/projectInfoPages/Photosnap.js';
+import TipCalc from './Components/Projects/projectInfoPages/TipCalc.js';
 
 import AboutMe from './Components/AboutMe';
 import ContactMe from './Components/ContactMe';
@@ -55,6 +56,10 @@ function App() {
 
                 <Route exact path='/projectInfoPages/Photosnap'>
                     <Photosnap />
+                </Route>
+
+                <Route exact path='/projectInfoPages/TipCalc'>
+                    <TipCalc />
                 </Route>
 
                 <Route exact path='/projectInfoPages/HeroGame'>
