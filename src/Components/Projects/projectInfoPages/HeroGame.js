@@ -52,7 +52,7 @@ class HeroGame extends React.Component {
                     <div className={classes.projectsInsideDiv}>
                         <h1>Hero Game</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Solo</p>
+                        <p className={classes.insideText}>&emsp;AngularJS</p>
 
                         <p className={classes.stack}>Purpose:</p>
                         <p className={classes.insideText}>&emsp;This is my first Angular project.  I wanted to build a small project that would allow me to understand how Angular works without being too complicated.  This game allowed me
