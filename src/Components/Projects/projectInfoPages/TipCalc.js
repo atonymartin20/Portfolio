@@ -41,28 +41,27 @@ const styles = () => ({
     },
 })
 
-class ContactsApp extends React.Component {
+class TipCalc extends React.Component {
     render() {
         const { classes } = this.props;
 
         return (
             <div className={classes.projectsDiv}>
-                <Navbar type="black"/>
+                <Navbar type="black" />
                 <header className={classes.projectHeader}>
                     <div className={classes.projectsInsideDiv}>
-                        <h1>ContactsApp</h1>
+                        <h1>tip-calc</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Fullstack</p>
+                        <p className={classes.insideText}>&emsp;VueJS Front End Only</p>
 
                         <p className={classes.stack}>Purpose:</p>
-                        <p className={classes.insideText}>&emsp;This was a demo project that I built continuing to improve my knowledge and understanding of ContextAPI.  I also wanted to refresh my backend skillset by building a backend database that had all of the CRUD functions.  This was also my first time building a PostgresQL database.</p>
+                        <p className={classes.insideText}>&emsp;This is my first VueJS project. I wanted to start with a smaller project that didn't have alot of routing or variables in the store.</p>
 
                         <p className={classes.stack}>Role:</p>
-                        <p className={classes.insideText}>&emsp;As a solo project, I designed, built, and styled the entire project.</p>
+                        <p className={classes.insideText}>&emsp;Frontend Mentor provided the style-guide, figma files, and image assets.  I built the rest of the project.</p>
 
                         <p className={classes.stack}>Tech Stack:</p>
-                        <p className={classes.insideText}>&emsp;On the frontend I used React, MaterialUI, ContextAPI, and axios.  This allows consistent state management and a quick and reliable framework.</p>
-                        <p className={classes.insideText}>&emsp;On the backend I used Node, Express, PostgresQL, and Knex.  This allowed the entire project to be written in Javascript while having a potentially large database.</p>
+                        <p className={classes.insideText}>&emsp;This project was built using VueJS and Vuex.</p>
                     </div>
                 </header>
             </div>
@@ -70,4 +69,4 @@ class ContactsApp extends React.Component {
     }
 }
 
-export default withStyles(styles)(ContactsApp);
+export default withStyles(styles)(TipCalc);

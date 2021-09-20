@@ -52,7 +52,7 @@ class SandwichShoppe extends React.Component {
                     <div className={classes.projectsInsideDiv}>
                         <h1>Sandwich Shoppe</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Front End Only</p>
+                        <p className={classes.insideText}>&emsp;React Frontend Only</p>
 
                         <p className={classes.stack}>Purpose:</p>
                         <p className={classes.insideText}>&emsp;I wanted to build a larger front end project and this was a great project where I had a blank slate and plenty of areas I could expand.</p>

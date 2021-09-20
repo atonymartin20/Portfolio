@@ -112,7 +112,7 @@ class AboutMe extends React.Component {
                 <Navbar type='black' />
                     <header className={classes.aboutMeHeader}>
                         <h1 className={classes.aboutMeH1}>About Me</h1>
-                        <h1 className={classes.aboutMeHeaderText}>How's it going everyone? My name is Alex. I am a full-stack web developer with a particular interest in front-end development. My specialties include React, ContextAPI, Javascript, Redux, NodeJS, and Express.
+                        <h1 className={classes.aboutMeHeaderText}>How's it going everyone? My name is Alex. I am a full-stack web developer with a particular interest in Frontend development. My specialties include React, ContextAPI, Javascript, Redux, NodeJS, and Express.
                         <br/><br />
                         I've spent time working in a multitude of industries. I've worked in a factory helping to make sure that production quotas were consistently hit. I've also worked in an environment where I was communicating with customers on a daily basis, and worked to improve the user experience. I am interested in combining those skills in a team environment building cutting-edge projects.
                         <br /><br />

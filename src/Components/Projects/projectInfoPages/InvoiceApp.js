@@ -52,7 +52,7 @@ class InvoiceApp extends React.Component {
                     <div className={classes.projectsInsideDiv}>
                         <h1>Invoice App</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Front End Only</p>
+                        <p className={classes.insideText}>&emsp;React Frontend Only</p>
 
                         <p className={classes.stack}>Purpose:</p>
                         <p className={classes.insideText}>&emsp;This was another corporate style project that could be used in its current state or it could have a backend built to further enhance the project.  The framework for this project is on Frontend Mentor.</p>

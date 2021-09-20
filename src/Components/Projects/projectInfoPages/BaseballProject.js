@@ -52,7 +52,7 @@ class BaseballProject extends React.Component {
                     <div className={classes.projectsInsideDiv}>
                         <h1>Baseball Project</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Solo</p>
+                        <p className={classes.insideText}>&emsp;Fullstack</p>
 
                         <p className={classes.stack}>Purpose:</p>
                         <p className={classes.insideText}>&emsp;This is a project that I have wanted to build for a while, and I will continue to improve and update this project.  I designed this project to combine the information that I use from baseball statistical website Baseball Reference, Fangraphs, and Baseball Savant into one quick website.  This allows a user to quickly see how a player's traits have changed over the past four seasons.</p>
