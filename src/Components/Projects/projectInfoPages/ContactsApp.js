@@ -52,7 +52,7 @@ class ContactsApp extends React.Component {
                     <div className={classes.projectsInsideDiv}>
                         <h1>ContactsApp</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Solo</p>
+                        <p className={classes.insideText}>&emsp;Fullstack</p>
 
                         <p className={classes.stack}>Purpose:</p>
                         <p className={classes.insideText}>&emsp;This was a demo project that I built continuing to improve my knowledge and understanding of ContextAPI.  I also wanted to refresh my backend skillset by building a backend database that had all of the CRUD functions.  This was also my first time building a PostgresQL database.</p>
