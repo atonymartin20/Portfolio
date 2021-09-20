@@ -52,7 +52,7 @@ class RockPaperScissors extends React.Component {
                     <div className={classes.projectsInsideDiv}>
                         <h1>Rock Paper Scissors</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Front End Only</p>
+                        <p className={classes.insideText}>&emsp;React Frontend Only</p>
 
                         <p className={classes.stack}>Purpose:</p>
                         <p className={classes.insideText}>&emsp;I've been planning on building a simple Rock Paper Scissors Game for a while.  When I found this framework for the project on Frontend Mentor, I thought it would be an interesting project to build.  </p>

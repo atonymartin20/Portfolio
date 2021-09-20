@@ -52,7 +52,7 @@ class CoffeeRoasters extends React.Component {
                     <div className={classes.projectsInsideDiv}>
                         <h1>Coffee Roasters</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Front End Only</p>
+                        <p className={classes.insideText}>&emsp;React Frontend Only</p>
 
                         <p className={classes.stack}>Purpose:</p>
                         <p className={classes.insideText}>&emsp;I wanted to build a project that had more of a corporate feel.  I found the framework for this project on Frontend Mentor, and it fit what I was looking for.</p>

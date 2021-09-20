@@ -52,7 +52,7 @@ class Photosnap extends React.Component {
                     <div className={classes.projectsInsideDiv}>
                         <h1>Photosnap</h1>
                         <p className={classes.stack}>Project Type:</p>
-                        <p className={classes.insideText}>&emsp;Front End Only</p>
+                        <p className={classes.insideText}>&emsp;React Frontend Only</p>
 
                         <p className={classes.stack}>Purpose:</p>
                         <p className={classes.insideText}>&emsp;Photosnap is a new platform for photographers and visual storytellers to share their photos.  The framework for this project is on Frontend Mentor.  This project is a mobile first responsive design.</p>
