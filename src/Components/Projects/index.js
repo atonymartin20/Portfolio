@@ -35,12 +35,16 @@ class Projects extends React.Component {
             <div className={classes.projectsDiv}>
                 <Navbar type="black"/>
                 <header className={classes.projectHeader}>
-                    <h1>Group Projects:</h1>
+                    <h1>ReactJS Frontend:</h1>
+                    <ProjectCardList projectType="react"/>
+                    <h1 className={classes.marginTop}>ReactJS Fullstack:</h1>
+                    <ProjectCardList projectType="fullStack"/>
+                    <h1 className={classes.marginTop}>Group:</h1>
                     <ProjectCardList projectType="group"/>
-                    <h1 className={classes.marginTop}>Solo Projects:</h1>
-                    <ProjectCardList projectType="solo"/>
-                    <h1 className={classes.marginTop}>Front End Only:</h1>
-                    <ProjectCardList projectType="frontEnd"/>
+                    <h1 className={classes.marginTop}>AngularJS Fullstack:</h1>
+                    <ProjectCardList projectType="angular"/>
+                    <h1 className={classes.marginTop}>VueJS Frontend:</h1>
+                    <ProjectCardList projectType="vueJS"/>
                 </header>
             </div>
         )
